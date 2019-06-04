@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Home from './Components/Home';
@@ -7,11 +7,11 @@ import Portfolio from './Components/Portfolio';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Err from './Components/Err';
-import Navigation from './Components/Navigation';   
+import Navigation from './Components/Navigation';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navigation />
       <Switch>
         <Route path='/' component={Home} exact />
@@ -20,7 +20,7 @@ function App() {
         <Route path='/contact' component={Contact} />
         <Route component={Err} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
