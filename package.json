@@ -4,11 +4,13 @@
   "private": true,
   "homepage": "https://melskywalker.github.io/",
   "dependencies": {
+    "@workswithweb/threejs-orbit-controls": "0.0.3",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "three": "^0.105.2"
   },
   "scripts": {
     "start": "react-scripts start",
