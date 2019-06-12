@@ -37,7 +37,7 @@ export default class ThreeScene extends Component {
         this.camera.position.z = 5;
         // this.controls = new OrbitControls( this.camera, this.mount );
 
-        this.renderer = new THREE.WebGLRenderer();
+        this.renderer = new THREE.WebGLRenderer({ alpha: true });
         this.renderer.setSize(width, height);
         this.mount.appendChild(this.renderer.domElement);
     };
@@ -72,12 +72,11 @@ export default class ThreeScene extends Component {
         this.mouse = new THREE.Vector2();
         this.target = new THREE.Vector2();
         this.windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
-        // this.camera.lookAt( this.scene.position )
     };
 
     startAnimationLoop = () => {
-        this.cube.rotation.x += 0.01;
-        this.cube.rotation.y += 0.01;
+        // this.cube.rotation.x += 0.01;
+        // this.cube.rotation.y += 0.01;
 
         this.target.x = (this.mouse.x) * 0.003;
         this.target.y = (this.mouse.y) * 0.003;
@@ -86,7 +85,6 @@ export default class ThreeScene extends Component {
         this.cube.rotation.y += 0.05 * (this.target.x - this.cube.rotation.y);
 
         this.renderer.render(this.scene, this.camera);
-        // this.updateRender();
         this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
     };
 
@@ -104,19 +102,11 @@ export default class ThreeScene extends Component {
         this.mouse.y = (e.clientY - this.windowHalf.x);
     }
 
-    updateRender = () => {
-        this.targetX = this.mouseX * 0.01;
-        this.targetY = this.mouseY * 0.01;
-        this.cube.rotation.y += 0.05 * (this.targetX - this.cube.rotation.y);
-        this.cube.rotation.x += 0.05 * (this.targetY - this.cube.rotation.x);
-
-        this.renderer.render(this.scene, this.camera);
-    }
-
     render() {
         return (
             <div ref={ref => (this.mount = ref)}
             onMouseMove = { this.handleMouseMove }
+            style= {{ position: 'absolute' }}
             />
         )
     }
