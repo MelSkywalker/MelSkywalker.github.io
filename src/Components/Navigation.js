@@ -7,7 +7,7 @@ const Navigation = () => {
             <NavLink to='/' >Home</NavLink>
             <NavLink to='/portfolio' >Portfolio</NavLink>
             <NavLink to='/about' >About Me</NavLink>
-            <NavLink to='/contact' >Contact Me</NavLink>
+            <NavLink to='/hireme' >Hire Me!</NavLink>
         </div>
     );
 };

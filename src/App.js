@@ -19,7 +19,7 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/portfolio' component={Portfolio} />
         <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
+        <Route path='/hireme' component={Contact} />
         <Route component={Err} />
       </Switch>
     </HashRouter>
