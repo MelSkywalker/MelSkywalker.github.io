@@ -13,13 +13,13 @@ import Test3 from './Components/Home/test.3';
 function App() {
   return (
     <HashRouter>
-      <Test3 />
+      {/* <Test3 /> */}
       <Navigation />
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/portfolio' component={Portfolio} />
         <Route path='/about' component={About} />
-        <Route path='/hireme' component={Contact} />
+        <Route path='/contact' component={Contact} />
         <Route component={Err} />
       </Switch>
     </HashRouter>

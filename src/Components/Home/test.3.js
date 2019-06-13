@@ -81,7 +81,7 @@ export default class ThreeScene extends Component {
         this.target.x = (this.mouse.x) * 0.003;
 
         //This line makes the camera rotate in the Y axis
-        // this.target.y = (this.mouse.y) * 0.003;
+        this.target.y = (this.mouse.y) * 0.003;
 
         this.cube.rotation.x += 0.05 * (this.target.y - this.cube.rotation.x);
         this.cube.rotation.y += 0.05 * (this.target.x - this.cube.rotation.y);
@@ -108,7 +108,7 @@ export default class ThreeScene extends Component {
         return (
             <div ref={ref => (this.mount = ref)}
             onMouseMove = { this.handleMouseMove }
-            style= {{ position: 'absolute' }}
+            style= {{ position: 'absolute', zIndex: '-5' }}
             />
         )
     }
