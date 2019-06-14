@@ -93,8 +93,10 @@ export default class ThreeScene extends Component {
     };
 
     handleWindowResize = () => {
-        const width = this.mount.clientWidth;
-        const height = this.mount.clientHeight;
+        // const width = this.mount.clientWidth;
+        // const height = this.mount.clientHeight;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         this.renderer.setSize(width, height);
         this.camera.aspect = width / height;
         this.camera.updateProjectionMatrix();
