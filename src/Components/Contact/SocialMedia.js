@@ -19,8 +19,8 @@ export default class SocialMedia extends Component {
     render() {
         return(
             <Container>
-                <a href='https://github.com/MelSkywalker'><Icon src={GithubLogo}></Icon></a>
-                <a href='https://www.linkedin.com/in/meldev/'><Icon src={LinkedInLogo}></Icon></a>
+                <a target='_blank' rel='noopener noreferrer' href='https://github.com/MelSkywalker'><Icon src={GithubLogo}></Icon></a>
+                <a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/meldev/'><Icon src={LinkedInLogo}></Icon></a>
             </Container>
         )
     }

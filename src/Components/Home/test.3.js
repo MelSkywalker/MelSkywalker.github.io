@@ -69,19 +69,21 @@ export default class ThreeScene extends Component {
         this.scene.add(lights[1]);
         this.scene.add(lights[2]);
 
-        this.mouse = new THREE.Vector2();
+        // this.mouse = new THREE.Vector2();
         this.target = new THREE.Vector2();
-        this.windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
+        // this.windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
     };
 
     startAnimationLoop = () => {
         // this.cube.rotation.x += 0.01;
         // this.cube.rotation.y += 0.01;
 
-        this.target.x = (this.mouse.x) * 0.003;
+        this.target.x = (this.props.mouseX) * 0.003;
+        // this.target.x = (this.mouse.x) * 0.003;
 
         //This line makes the camera rotate in the Y axis
-        this.target.y = (this.mouse.y) * 0.003;
+        this.target.y = (this.props.mouseY) * 0.003;
+        // this.target.y = (this.mouse.y) * 0.003;
 
         this.cube.rotation.x += 0.05 * (this.target.y - this.cube.rotation.x);
         this.cube.rotation.y += 0.05 * (this.target.x - this.cube.rotation.y);
@@ -98,17 +100,20 @@ export default class ThreeScene extends Component {
         this.camera.updateProjectionMatrix();
     }
 
-    handleMouseMove = (e) => {
-        console.log('on mouse move');
-        this.mouse.x = (e.clientX - this.windowHalf.x);
-        this.mouse.y = (e.clientY - this.windowHalf.x);
-    }
+    // handleMouseMove = (e) => {
+    //     console.log('on mouse move');
+    //     //this.mouse.x = (e.clientX - this.windowHalf.x);
+    //     this.mouse.x = this.props.mouseX;
+    //     //this.mouse.y = (e.clientY - this.windowHalf.x);
+    //     this.mouse.y = this.props.mouseY;
+    // }
 
     render() {
         return (
             <div ref={ref => (this.mount = ref)}
-            onMouseMove = { this.handleMouseMove }
-            style= {{ position: 'absolute', zIndex: '-5' }}
+            // onMouseMove = { this.props.handleMouseMove }
+            // style= {{ position: 'absolute' }}
+            style={{ position: 'relative', zIndex: '-5'}}
             />
         )
     }

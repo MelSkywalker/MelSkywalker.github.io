@@ -5,7 +5,7 @@ import Form from './Contact/Form';
 import Map from './Contact/Map';
 import SocialMedia from './Contact/SocialMedia';
 
-import ContactImg from '../contact-text.png';
+import ContactImg from './Contact/contact-text.png';
 
 const MainContainer = styled.div`
     display: flex;

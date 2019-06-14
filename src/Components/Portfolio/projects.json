@@ -1,0 +1,25 @@
+{
+    "project": [{
+        "title": "Pokedex Go!",
+        "description": "This a Pokedex webApp which show Pokemon Go data from the 1st gen of Pokemon.",
+        "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
+        "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
+        "tools": [
+            "react",
+        ],
+        "mainImg": "https://www.nintenderos.com/wp-content/uploads/2019/04/pokemon-go-902x507-e1556017800684.jpg",
+        "hoverImg": "https://media1.giphy.com/media/l41YouCUUcreUabHW/giphy.gif"
+    },
+    {
+        "title": "Hacker News Alerts",
+        "description": "It tweets you alerts of the news of the topics you are interested in.",
+        "link": "not yet :v",
+        "repository": "https://github.com/MelSkywalker/HNAlerts",
+        "tools": [
+            "node js"
+        ],
+        "mainImg": "http://estebanromero.com/wp-content/uploads/2018/02/hackernews.jpg",
+        "hoverImg": "https://assets.teenvogue.com/photos/56b4f21327a088e24b967bb6/16:9/w_1280,c_limit/twitter-gifs.gif"
+    }
+    ]
+}

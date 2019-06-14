@@ -5,7 +5,8 @@ import styled from 'styled-components';
 const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 50%;
 `;
 
 const Container = styled.div`
@@ -19,7 +20,6 @@ const AboutMe = () => {
             <Container>
                 <Timeline />
             </Container>
-            <Container></Container>
         </MainContainer>
     );
 };

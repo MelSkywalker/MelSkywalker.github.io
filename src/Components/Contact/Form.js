@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Grid from 'styled-components-grid';
 
 const Form = styled.form`
     margin: 3em;

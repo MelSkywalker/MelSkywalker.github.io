@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Vector2 } from 'three';
 import styled from 'styled-components';
-import Grid from 'styled-components-grid';
 
 import Test3 from './Home/test.3';
+
+const MainContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+`;
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2em;
+    position: absolute;
+`;
 
 const Title = styled.h1`
     font-family: 'Audiowide', cursive;
@@ -10,7 +24,7 @@ const Title = styled.h1`
     font-size: 4em;
     text-align: center;
     color: aliceblue;
-    margin-top: 50%;
+    margin-top: 40%;
 `;
 
 const Subtitle = styled.h2`
@@ -20,19 +34,35 @@ const Subtitle = styled.h2`
     color: aliceblue;
 `;
 
-const Home = () => {
-    return (
-        <div>
-        <Test3 />
-        <Grid halign='center' valign='center'>
-            <Grid.Unit size={1/2}>
-                <Title>MELISA QUESADA</Title>
-                <Subtitle>FRONT END DEVELOPER & MOTION DESIGNER</Subtitle>
-            </Grid.Unit>
-            <Grid.Unit size={1/2}></Grid.Unit>
-        </Grid>
-        </div>
-    );
+class Home extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            mouse: new Vector2(),
+            windowHalf: new Vector2(window.innerWidth/2, window.innerHeight/2),
+        }
+    }
+
+    handleMouseMove = (e) => {
+        this.setState({
+            mouse: {
+                x: e.clientX - this.state.windowHalf.x,
+                y: e.clientY - this.state.windowHalf.x,
+            }
+        });
+    }
+
+    render() {
+        return (
+            <MainContainer onMouseMove={this.handleMouseMove}>
+                <Test3 mouseX={this.state.mouse.x} mouseY={this.state.mouse.y} windowHalf={this.windowHalf}/>
+                <Container>
+                    <Title>MELISA QUESADA</Title>
+                    <Subtitle>FRONT END DEVELOPER & MOTION DESIGNER</Subtitle>
+                </Container>
+            </MainContainer>
+        );
+    }
 };
 
 export default Home;
