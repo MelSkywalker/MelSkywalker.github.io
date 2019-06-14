@@ -34,7 +34,8 @@ export default class GdlMap extends Component {
                 icon={myIcon}
                 autoPan='true'>
                     <Popup>
-                        I'm right here! </br> Guadalajara, Jalisco
+                        <h3>I'm right here!</h3>
+                        <p>Guadalajara, Jalisco</p>
                     </Popup>
                 </Marker>
             </Map>

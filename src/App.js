@@ -8,7 +8,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Err from './Components/Err';
 import Navigation from './Components/Navigation';
-import Test3 from './Components/Home/test.3';
+// import Test3 from './Components/Home/test.3';
 
 function App() {
   return (

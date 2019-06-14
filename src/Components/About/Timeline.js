@@ -5,7 +5,7 @@ import 'react-vertical-timeline-component/style.min.css';
 export default class Timeline extends Component {
     render() {
         return (
-            <VerticalTimeline layout='2-columns'>
+            <VerticalTimeline layout='1-column'>
                 <VerticalTimelineElement iconStyle={{background: 'rgb(33, 150, 243)', color:'#fff'}}>
                     <h3>I am...</h3>
                     <p>A front end developer! But also a motion designer!</p>
