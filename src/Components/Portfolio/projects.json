@@ -1,14 +1,15 @@
-{
-    "project": [{
+ [
+     {
         "title": "Pokedex Go!",
         "description": "This a Pokedex webApp which show Pokemon Go data from the 1st gen of Pokemon.",
         "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
         "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
         "tools": [
-            "react",
+            "javascript",
+            "react"
         ],
-        "mainImg": "https://www.nintenderos.com/wp-content/uploads/2019/04/pokemon-go-902x507-e1556017800684.jpg",
-        "hoverImg": "https://media1.giphy.com/media/l41YouCUUcreUabHW/giphy.gif"
+        "logo": "https://a.imge.to/2019/06/15/P8GbF.png",
+        "picture": "https://a.imge.to/2019/06/15/PVvTV.png"
     },
     {
         "title": "Hacker News Alerts",
@@ -16,10 +17,11 @@
         "link": "not yet :v",
         "repository": "https://github.com/MelSkywalker/HNAlerts",
         "tools": [
+            "javascript",
             "node js"
         ],
-        "mainImg": "http://estebanromero.com/wp-content/uploads/2018/02/hackernews.jpg",
-        "hoverImg": "https://assets.teenvogue.com/photos/56b4f21327a088e24b967bb6/16:9/w_1280,c_limit/twitter-gifs.gif"
+        "logo": "https://a.imge.to/2019/06/15/P8SDi.png",
+        "picture": "https://whatpixel.com/images/2016/01/01-hacker-news-fp-redesign.jpg"
     }
     ]
-}
+    
