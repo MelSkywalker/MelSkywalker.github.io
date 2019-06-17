@@ -14,23 +14,28 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 2em;
+    align-self: center;
+    margin-left: 8%;
     position: absolute;
+    padding-top: 0;
+    padding-bottom: 8%;
 `;
 
 const Title = styled.h1`
     font-family: 'Audiowide', cursive;
     font-weight: normal;
-    font-size: 4em;
-    text-align: center;
+    font-size: 5em;
+    text-align: left;
     color: aliceblue;
-    margin-top: 40%;
+    margin-top: 0;
+    margin-bottom: 0;
 `;
 
 const Subtitle = styled.h2`
     font-family: 'Syncopate', sans-serif;
+    font-size: 1.8em;
     font-weight: lighter;
-    text-align: center;
+    text-align: left;
     color: aliceblue;
 `;
 
