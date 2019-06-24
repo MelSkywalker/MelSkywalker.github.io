@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e0a22efa.chunk.css",
-    "main.js": "/static/js/main.bd59b594.chunk.js",
-    "main.js.map": "/static/js/main.bd59b594.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.1cb62e95.chunk.css": "/static/css/2.1cb62e95.chunk.css",
-    "static/js/2.dedaa542.chunk.js": "/static/js/2.dedaa542.chunk.js",
-    "static/js/2.dedaa542.chunk.js.map": "/static/js/2.dedaa542.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6898974eac2cf354481848db83109ae7.js": "/precache-manifest.6898974eac2cf354481848db83109ae7.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.1cb62e95.chunk.css.map": "/static/css/2.1cb62e95.chunk.css.map",
-    "static/css/main.e0a22efa.chunk.css.map": "/static/css/main.e0a22efa.chunk.css.map",
-    "static/media/contact-text.png": "/static/media/contact-text.395b67e6.png",
-    "static/media/pikachu.gif": "/static/media/pikachu.57099827.gif",
-    "static/media/pokedexGo.png": "/static/media/pokedexGo.ba0b0804.png"
+    "main.css": "/src/static/css/main.d615170d.chunk.css",
+    "main.js": "/src/static/js/main.1708e117.chunk.js",
+    "main.js.map": "/src/static/js/main.1708e117.chunk.js.map",
+    "runtime~main.js": "/src/static/js/runtime~main.e7ecc13d.js",
+    "runtime~main.js.map": "/src/static/js/runtime~main.e7ecc13d.js.map",
+    "static/css/2.1cb62e95.chunk.css": "/src/static/css/2.1cb62e95.chunk.css",
+    "static/js/2.cc68398f.chunk.js": "/src/static/js/2.cc68398f.chunk.js",
+    "static/js/2.cc68398f.chunk.js.map": "/src/static/js/2.cc68398f.chunk.js.map",
+    "index.html": "/src/index.html",
+    "precache-manifest.cc11ac8a8a658fa1fa466f6c71428d9e.js": "/src/precache-manifest.cc11ac8a8a658fa1fa466f6c71428d9e.js",
+    "service-worker.js": "/src/service-worker.js",
+    "static/css/2.1cb62e95.chunk.css.map": "/src/static/css/2.1cb62e95.chunk.css.map",
+    "static/css/main.d615170d.chunk.css.map": "/src/static/css/main.d615170d.chunk.css.map",
+    "static/media/contact-text.png": "/src/static/media/contact-text.395b67e6.png"
   }
 }
