@@ -13,6 +13,7 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    border: red solid 3px;
 `;
 
 const Container = styled.div`
@@ -22,6 +23,7 @@ const Container = styled.div`
     width: 100%;
     height: 65%;
     background: gray;
+    border: blue solid 4px;
 `;
 
 export default class Gallery extends Component {

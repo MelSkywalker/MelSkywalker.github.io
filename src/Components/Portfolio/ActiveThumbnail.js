@@ -6,11 +6,13 @@ const Container = styled.div`
     width: 60%;
     background: #333;
     position: relative;
+    border: forestgreen solid 4px;
 `;
 
 const Img = styled.img`
-    height: 100%
+    height: 100%;
     width: auto;
+    border: brown solid 3px;
 `;
 
 const ActiveThumbnail = ({ activeThumbnail }) => {
