@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Home from './Components/Home';
-import Portfolio from './Components/Portfolio';
+import Portfolio from './Components/newPortfolio';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Err from './Components/Err';
