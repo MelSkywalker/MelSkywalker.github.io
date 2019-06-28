@@ -16,6 +16,7 @@
     "react-scripts": "3.0.1",
     "react-vertical-timeline-component": "^2.3.1",
     "styled-components": "^4.3.1",
+    "styled-icons": "^8.1.0",
     "three": "^0.105.2"
   },
   "scripts": {

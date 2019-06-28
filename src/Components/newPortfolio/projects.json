@@ -1,0 +1,27 @@
+ [
+     {
+        "title": "Pokedex Go!",
+        "description": "This a Pokedex webApp which show Pokemon Go data from the 1st gen of Pokemon.",
+        "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
+        "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
+        "tools": [
+            "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png",
+            "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        ],
+        "logo": "https://a.imge.to/2019/06/15/P8GbF.png",
+        "picture": "https://a.imge.to/2019/06/15/PVvTV.png"
+    },
+    {
+        "title": "Hacker News Alerts",
+        "description": "It tweets you alerts of the news of the topics you are interested in.",
+        "link": "not yet :v",
+        "repository": "https://github.com/MelSkywalker/HNAlerts",
+        "tools": [
+            "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png",
+            "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png"
+        ],
+        "logo": "https://a.imge.to/2019/06/15/P8SDi.png",
+        "picture": "https://whatpixel.com/images/2016/01/01-hacker-news-fp-redesign.jpg"
+    }
+    ]
+    

@@ -8,26 +8,26 @@ const MainContainer = styled.div`
     align-items: center;
     /* flex-wrap: wrap; */
 
-    margin: 5vw;
+    margin: 5vh;
     height: 65vh;
     width: 70vw;
     position: relative;
 	/* display: inline-block; */
-    background-color: #42ecf5;
-    background-image: linear-gradient(#42ecf5, #96faff);
+    background-color: #548fdf;
+    background-image: linear-gradient(#1b6ec3, #22e0eb);
 
-    border-radius: 10px;
+    border-radius: 40px;
     box-shadow: 0px 1px 4px -2px #333;
     text-shadow: 0px -1px #333;
 
     &:after {
-        border-radius: 10px;
+        border-radius: 40px;
         content: '';
 	    position: absolute;
         top: 2px;
         left: 2px;
         width: calc(100% - 4px);
-        height: 30%;
+        height: 5%;
         background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
     }
 `;
@@ -88,24 +88,28 @@ const Icon = styled.img`
 const ProjectTitle = styled.h2``;
 const ProjectBody = styled.p``;
 
-const Viewer = ({title, description, link, repository, tools}) => {
+class Viewer extends Component {
+    render(){
     return (
         <MainContainer>
-            <MainViewer></MainViewer>
+            <MainViewer>
+                Picture
+            </MainViewer>
             <Description>
-                <Thumbnail></Thumbnail>
+                <Thumbnail>Logo</Thumbnail>
                 <TextContainer>
-                    <ProjectTitle>Titulo</ProjectTitle>
-                    <ProjectBody>Description</ProjectBody>
+                    <ProjectTitle>title</ProjectTitle>
+                    <ProjectBody>description</ProjectBody>
                 </TextContainer>
                 <TextContainer>
-                    <Links href={link}>Project</Links>
-                    <Links href={repository}>Repository</Links>
+                    <Links href='link'>Project</Links>
+                    <Links href='repository'>Repository</Links>
                 </TextContainer>
-                <IconContainer>Tools</IconContainer>
+                <IconContainer>tools</IconContainer>
             </Description>
         </MainContainer>
     );
+}
 };
 
 export default Viewer;
