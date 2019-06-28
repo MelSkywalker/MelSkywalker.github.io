@@ -13,7 +13,7 @@
     {
         "title": "Hacker News Alerts",
         "description": "It tweets you alerts of the news of the topics you are interested in.",
-        "link": "not yet :v",
+        "link": "https://melskywalker.github.io/hn-Alerts/",
         "repository": "https://github.com/MelSkywalker/HNAlerts",
         "tools": [
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png",

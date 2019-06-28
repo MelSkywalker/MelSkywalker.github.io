@@ -1,7 +1,7 @@
 .NavLink {
     display: inline-block;
     text-decoration: none;
-    color: aliceblue;
+    color: black;
     font-family: 'Syncopate', sans-serif;
     font-weight: lighter;
     font-size: 1.3em;
@@ -14,7 +14,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: aliceblue;
+    background: black;
     transition: width .3s;
 }
 

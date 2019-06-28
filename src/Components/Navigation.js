@@ -16,7 +16,7 @@ const Navigation = () => {
             <NavLink to='/'className='NavLink' >Home</NavLink>
             <NavLink to='/portfolio'className='NavLink' >Portfolio</NavLink>
             <NavLink to='/about'className='NavLink' >Get to know me!</NavLink>
-            <NavLink to='/contact'className='NavLink' >Let's chat!</NavLink>
+            <NavLink to='/contact'className='NavLink' >Hire me!</NavLink>
         </NavBar>
     );
 };
