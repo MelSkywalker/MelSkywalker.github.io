@@ -8,6 +8,7 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import Err from './Components/Err';
 import Navigation from './Components/Navigation';
+import HireMe from './Components/newContact';
 // import Test3 from './Components/Home/test.3';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         <Route path='/' component={Home} exact />
         <Route path='/portfolio' component={Portfolio} />
         <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
+        <Route path='/contact' component={HireMe} />
+        <Route path='/contact2' component={Contact} />
         <Route component={Err} />
       </Switch>
     </HashRouter>

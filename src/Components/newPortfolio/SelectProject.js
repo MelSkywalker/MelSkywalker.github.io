@@ -55,7 +55,7 @@ const ProjectSelector = styled.select`
 
 const ArrowIcon = styled(DownArrow)`
   position: absolute;
-  right: 17%;
+  right: 15%;
   pointer-events: none;
   color: #e8d915;
   height: 3em;

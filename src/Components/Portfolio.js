@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Projects from "./newPortfolio/projects.json";
 import Viewer from "./newPortfolio/Viewer";
 import SelectProject from "./newPortfolio/SelectProject";
+import Cv from './newPortfolio/cv';
 
 const MainContainer = styled.div`
   display: flex;
@@ -86,6 +87,7 @@ class Portfolio extends Component {
     const { projects } = this.state;
     return (
       <MainContainer>
+        <Cv></Cv>
         {this.renderActive()}
         <SelectProject projects={projects} handleChange={this.handleChange} />
       </MainContainer>

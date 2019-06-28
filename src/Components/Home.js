@@ -7,7 +7,7 @@ import Test3 from './Home/test.3';
 const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
 `;
 
 const Container = styled.div`
@@ -15,8 +15,9 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     position: absolute;
+    top: 20%;
     padding-top: 0;
     padding-bottom: 8%;
 `;

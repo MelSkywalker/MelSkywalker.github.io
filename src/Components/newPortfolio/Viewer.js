@@ -27,10 +27,10 @@ const MainContainer = styled.div`
     border-radius: 40px;
     content: "";
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: 2px;
     width: calc(100% - 4px);
-    height: 5%;
+    height: 6%;
     background: linear-gradient(
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.2)
@@ -42,8 +42,11 @@ const MainViewer = styled.figure`
 display: flex;
 justify-content: center;
 align-items: center;
+box-shadow: inset 0 8px 3px -6px #858585;
+/* box-shadow: inset 0 3px 3px #858585; */
+
   margin: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: white;
   width: 60%;
   height: 80%;
@@ -66,8 +69,10 @@ const Thumbnail = styled.figure`
 display: flex;
 justify-content: center;
 align-items: center;
-border-radius: 5px;
+border-radius: 8px;
   margin: 0;
+  box-shadow: inset 0 8px 2px -6px #858585;
+  /* box-shadow: inset 0 3px 3px #858585; */
   background-color: white;
   width: 100%;
   height: 40%;
@@ -119,7 +124,9 @@ const Viewer = ({ title, description, link, repository, logo, tools, picture }) 
   return (
     <MainContainer>
       <MainViewer>
+        <a href={link} target="_blank">
           <ProjectPicture src={picture}></ProjectPicture>
+          </a>
       </MainViewer>
       <Description>
         <Thumbnail>
@@ -130,8 +137,8 @@ const Viewer = ({ title, description, link, repository, logo, tools, picture }) 
           <ProjectBody>{description}</ProjectBody>
         </TextContainer>
         <TextContainer>
-          <Links href={link}><LinkExternal size="24" color="black"/> Project</Links>
-          <Links href={repository}><Github size="24" color="black"/> Repository</Links>
+          <Links href={link} target="_blank"><LinkExternal size="24" color="black"/> Project</Links>
+          <Links href={repository} target="_blank"><Github size="24" color="black"/> Repository</Links>
         </TextContainer>
         <IconContainer>{tools.map( tool => {
             return <Icon src={tool}></Icon>
