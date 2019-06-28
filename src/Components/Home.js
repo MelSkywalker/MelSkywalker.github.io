@@ -26,9 +26,14 @@ const Title = styled.h1`
     font-weight: normal;
     font-size: 5em;
     text-align: left;
-    color: aliceblue;
+    /* color: aliceblue; */
     margin-top: 0;
     margin-bottom: 0;
+
+    text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 `;
 
 const Subtitle = styled.h2`
@@ -36,7 +41,11 @@ const Subtitle = styled.h2`
     font-size: 1.8em;
     font-weight: lighter;
     text-align: left;
-    color: aliceblue;
+    /* color: aliceblue; */
+    text-transform: uppercase;
+    background: linear-gradient(to right, #e588d3 0%, #9f56cc 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 `;
 
 class Home extends Component {
