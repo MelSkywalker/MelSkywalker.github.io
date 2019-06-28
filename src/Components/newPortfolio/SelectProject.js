@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { DownArrow } from "styled-icons/boxicons-solid";
 
-
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -50,7 +49,7 @@ const ProjectSelector = styled.select`
   padding-left: 2em;
 
   &:hover {
-      background-color: #fdf4c0;
+    background-color: #fdf4c0;
   }
 `;
 
@@ -63,13 +62,26 @@ const ArrowIcon = styled(DownArrow)`
   width: auto;
 `;
 
-const SelectProject = ({ projects, handleClick }) => {
+const SelectProject = ({ projects, handleChange }) => {
   return (
     <MainContainer>
-      <ProjectSelector>
+      <ProjectSelector
+        onChange={handleChange}
+      >
         <option value="" hidden>
           Select Project
         </option>
+        {projects.map((project, i) => {
+          return (
+            <option
+              key={project.title}
+              value={i}
+              data-index={i}
+            >
+              {project.title}
+            </option>
+          );
+        })}
       </ProjectSelector>
       <ArrowIcon />
     </MainContainer>
