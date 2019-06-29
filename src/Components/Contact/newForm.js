@@ -6,7 +6,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 width: 40%;
-height: 50%;
+height: 30%;
 padding: 2em;
 
   position: relative;
@@ -58,7 +58,7 @@ const Textarea = styled.textarea`
     background-color: white;
     margin: 0.5em;
     padding: 1em;
-    height: 40%;
+    height: 50%;
     border-radius: 5px;
     border: 0;
     border-width: 2px;
