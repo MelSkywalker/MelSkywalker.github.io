@@ -13,7 +13,7 @@ const MainContainer = styled.div`
 
   margin: 5vh;
   height: 65vh;
-  width: 70vw;
+  width: 60vw;
   position: relative;
   /* display: inline-block; */
   background-color: #1b6ec3;

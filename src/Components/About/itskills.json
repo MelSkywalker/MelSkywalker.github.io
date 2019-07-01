@@ -1,0 +1,24 @@
+[
+    {
+       "skill": "Javascript"
+       
+   },
+   {
+       "skill": "HTML5"
+   },
+   {
+        "skill": "CSS3"
+    },
+    {
+        "skill": "React JS"
+    },
+    {
+        "skill": "Node JS"
+    },
+    {
+        "skill": "Firebase"
+    },
+    {
+        "skill": "Git"
+    }
+]

@@ -48,7 +48,8 @@ const Menu = styled.ul`
 
 const MenuItems = styled.li`
     padding: 10%;
-    border-bottom: white solid 5px;
+    border: #fff ridge 5px;
+    border-bottom: white ridge 5px;
     color: white;
 
     &:hover{
