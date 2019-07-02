@@ -87,7 +87,6 @@ class Portfolio extends Component {
     const { projects } = this.state;
     return (
       <MainContainer>
-        <Cv></Cv>
         {this.renderActive()}
         <SelectProject projects={projects} handleChange={this.handleChange} />
       </MainContainer>
