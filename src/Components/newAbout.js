@@ -21,7 +21,10 @@ const Container = styled.div`
     height: 50%;
     padding: 1em;
     border-radius: 20px;
-    background-color: green;
+    background-image: linear-gradient(#42f5d7, #17e5e8);
+    box-shadow: 0px 1px 4px -2px #333;
+    border-bottom: #17e5e8 ridge 7px;
+    border-left: #17e5e8 groove 7px;
 `;
 
 const P = styled.p`
@@ -62,7 +65,6 @@ const About = () => {
                     {softSkills.map(skill => <ItemSoft key={skill.skill}>{skill.skill}</ItemSoft>)}
                 </List>
             </Container>
-            
         </MainContainer>
     );
 };

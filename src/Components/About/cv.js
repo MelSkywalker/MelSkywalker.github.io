@@ -15,6 +15,9 @@ const Button = styled.button`
   text-shadow: 0px -1px #333;
   cursor: pointer;
 
+  border-bottom: #f5e342 ridge 7px;
+  border-left: #f5e342 groove 7px;
+
 `;
 
 const Cv = () => {

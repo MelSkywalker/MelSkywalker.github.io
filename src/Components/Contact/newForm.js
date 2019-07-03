@@ -16,6 +16,9 @@ padding: 2em;
   border-radius: 20px;
   box-shadow: 0px 1px 4px -2px #333;
   text-shadow: 0px -1px #333;
+  box-shadow: 0px 1px 4px -2px #333;
+    border-bottom: #de6ae6 ridge 7px;
+    border-left: #de6ae6 groove 7px;
 
   &:after {
     border-radius: 30px;
