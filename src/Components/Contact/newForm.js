@@ -103,12 +103,13 @@ class NewForm extends Component {
     state = {
         name: '',
         message: '',
+        subject: '',
         email: '',
         sent: false,
         buttonText: 'SEND!'
     }
 
-    formSubmin= (e) => {
+    formSubmit= (e) => {
         e.preventDefault();
         this.setState({
             buttonText: '...sending',
@@ -119,7 +120,7 @@ class NewForm extends Component {
             subject: this.state.subject,
             message: this.state.message,
         }
-        axios.post('API_URI', data)
+        axios.post('https://create-react-app-21yfpz3b9.now.sh/#/', data)
             .then( res => {
                 this.setState({ sent: true }, this.resetForm())
             })
