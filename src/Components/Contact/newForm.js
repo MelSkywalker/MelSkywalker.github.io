@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 
 const Form = styled.form`
@@ -90,7 +91,7 @@ const Button = styled.button`
     box-shadow: 0px 1px 4px -2px #333;
     text-shadow: 0px -1px #333;
     cursor: pointer;
-    
+
     &:active{
         background-color: #e5de5a;
         border-left: #e5de5a ridge 4px;
@@ -98,20 +99,58 @@ const Button = styled.button`
     }
 `;
 
-const NewForm = () => {
+class NewForm extends Component {
+    state = {
+        name: '',
+        message: '',
+        email: '',
+        sent: false,
+        buttonText: 'SEND!'
+    }
+
+    formSubmin= (e) => {
+        e.preventDefault();
+        this.setState({
+            buttonText: '...sending',
+        })
+        let data = {
+            name: this.state.name,
+            email: this.state.email,
+            subject: this.state.subject,
+            message: this.state.message,
+        }
+        axios.post('API_URI', data)
+            .then( res => {
+                this.setState({ sent: true }, this.resetForm())
+            })
+            .catch( () => {
+                console.log('Message not sent')
+            })
+    }
+
+    resetForm = () => {
+        this.setState({
+            name:'',
+            email:'',
+            subject:'',
+            message:'',
+            buttonText: 'MESSAGE SENT!',
+        })
+    }
+    render() {
     return (
-        <Form>
+        <Form onSubmit={ (e) => this.formSubmit(e) }>
             <Title>LET'S WORK TOGETHER!</Title>
             <Div>
-                <InputName type="text" placeholder="Name" required></InputName>
-                <InputName type="email" placeholder="E-mail" required></InputName>
+                <InputName type="text" placeholder="Name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
+                <InputName type="email" placeholder="E-mail" value={this.state.email} onChange={ e => this.setState({ email: e.target.value }) } required></InputName>
             </Div>
-            <Input type="text" placeholder="Subject" required></Input>
-            {/* <Input type="text" placeholder="Message" required></Input> */}
-            <Textarea placeholder="Message" required></Textarea>
-            <Button>SEND!</Button>
+            <Input type="text" placeholder="Subject" value={this.state.subject} onChange={ e => this.setState({ subject: e.target.value }) } required></Input>
+            <Textarea placeholder="Message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
+            <Button type='submit'>{this.state.buttonText}</Button>
         </Form>
     );
+}
 };
 
 export default NewForm;
