@@ -103,12 +103,13 @@ class NewForm extends Component {
     state = {
         name: '',
         message: '',
+        subject: '',
         email: '',
         sent: false,
         buttonText: 'SEND!'
     }
 
-    formSubmin= (e) => {
+    formSubmit= (e) => {
         e.preventDefault();
         this.setState({
             buttonText: '...sending',
