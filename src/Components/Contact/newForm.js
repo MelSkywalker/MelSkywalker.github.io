@@ -120,8 +120,8 @@ class NewForm extends Component {
             subject: this.state.subject,
             message: this.state.message,
         }
-        // fetch('https://portfoliobe.herokuapp.com/', {
-        fetch('http://localhost:3001/', {
+        fetch('https://mel-portfolio-backend.herokuapp.com/', {
+        // fetch('http://localhost:3001/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -150,7 +150,7 @@ class NewForm extends Component {
     }
     render() {
     return (
-        <Form onSubmit={ (e) => this.formSubmit(e)} enctype="multipart/form-data">
+        <Form onSubmit={ (e) => this.formSubmit(e) } enctype="multipart/form-data">
             <Title>LET'S WORK TOGETHER!</Title>
             <Div>
                 <InputName type="text" placeholder="Name" name="name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
