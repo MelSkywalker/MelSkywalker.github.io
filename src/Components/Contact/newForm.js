@@ -114,19 +114,29 @@ class NewForm extends Component {
         this.setState({
             buttonText: '...sending',
         })
-        let data = {
+        const data = {
             name: this.state.name,
             email: this.state.email,
             subject: this.state.subject,
             message: this.state.message,
         }
-        axios.post('https://create-react-app-21yfpz3b9.now.sh/#/', data)
-            .then( res => {
-                this.setState({ sent: true }, this.resetForm())
-            })
-            .catch( () => {
-                console.log('Message not sent')
-            })
+        // fetch('https://portfoliobe.herokuapp.com/', {
+        fetch('http://localhost:3001/', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => {this.setState({ sent: true }, this.resetForm())})
+        .catch(err => console.log('Fetch error: ', err))
+
+        // axios.post('https://portfoliobe.herokuapp.com/', data)
+        //     .then( res => {
+        //         this.setState({ sent: true }, this.resetForm())
+        //     })
+        //     .catch( () => {
+        //         console.log('Message not sent')
+        //     })
     }
 
     resetForm = () => {
@@ -140,14 +150,14 @@ class NewForm extends Component {
     }
     render() {
     return (
-        <Form onSubmit={ (e) => this.formSubmit(e) }>
+        <Form onSubmit={ (e) => this.formSubmit(e)} enctype="multipart/form-data">
             <Title>LET'S WORK TOGETHER!</Title>
             <Div>
-                <InputName type="text" placeholder="Name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
-                <InputName type="email" placeholder="E-mail" value={this.state.email} onChange={ e => this.setState({ email: e.target.value }) } required></InputName>
+                <InputName type="text" placeholder="Name" name="name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
+                <InputName type="email" placeholder="E-mail" name="email" value={this.state.email} onChange={ e => this.setState({ email: e.target.value }) } required></InputName>
             </Div>
-            <Input type="text" placeholder="Subject" value={this.state.subject} onChange={ e => this.setState({ subject: e.target.value }) } required></Input>
-            <Textarea placeholder="Message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
+            <Input type="text" placeholder="Subject" name="subject" value={this.state.subject} onChange={ e => this.setState({ subject: e.target.value }) } required></Input>
+            <Textarea placeholder="Message" name="message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
             <Button type='submit'>{this.state.buttonText}</Button>
         </Form>
     );
