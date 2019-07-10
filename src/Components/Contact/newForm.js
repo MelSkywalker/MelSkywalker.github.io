@@ -145,7 +145,7 @@ class NewForm extends Component {
             email:'',
             subject:'',
             message:'',
-            buttonText: 'MESSAGE SENT!',
+            buttonText: 'SEND!',
         })
     }
     render() {
