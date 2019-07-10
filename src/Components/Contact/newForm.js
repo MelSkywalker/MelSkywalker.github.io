@@ -120,7 +120,7 @@ class NewForm extends Component {
             subject: this.state.subject,
             message: this.state.message,
         }
-        fetch('https://mel-portfolio-backend.herokuapp.com/', {
+        fetch('http://mel-portfolio-backend.herokuapp.com/', {
         // fetch('http://localhost:3001/', {
             method: 'POST',
             body: JSON.stringify(data),
