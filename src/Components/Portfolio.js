@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Modal from 'react-modal';
 import { Close } from 'styled-icons/material/Close';
 import { WindowClose } from 'styled-icons/fa-solid/WindowClose';
 import { Play } from 'styled-icons/fa-solid/Play';
@@ -7,6 +8,8 @@ import { Play } from 'styled-icons/fa-solid/Play';
 import Projects from "./newPortfolio/projects.json";
 import Viewer from "./newPortfolio/Viewer";
 import SelectProject from "./newPortfolio/SelectProject";
+
+Modal.setAppElement('#root');
 
 const MainContainer = styled.div`
   display: flex;
@@ -73,27 +76,49 @@ const ContentModal = styled.div`
   align-items: center;
 `;
 
+const StyledModal = styled(Modal)`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  /* position: absolute; */
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+
 const Video = styled.iframe`
-  width: 85%;
-  height: 85%;
+  width: 50%;
+  height: 50%;
   display: block;
 `;
 
 const CloseButton = styled(WindowClose)`
   position: absolute;
-  top: 0;
-  right: 12px;
+  top: 23vh;
+  right: 23vw;
   color: #30CFD0;
+  cursor: pointer;
 `;
 
 const OpenButton = styled.button`
   width: 8vh;
   height: 8vh;
   border-radius: 50%;
+  cursor: pointer;
+  margin: 2vw;
 `;
 
 const PlayIcon = styled(Play)`
   color: #30CFD0;
+`;
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 class Portfolio extends Component {
@@ -145,15 +170,22 @@ class Portfolio extends Component {
     const { projects } = this.state;
     return (
       <MainContainer>
-        <BgModal>
+        <StyledModal isOpen={this.state.isOpen} onRequestClose={()=>this.closeModal()}>
+          <Video title='Mel Quesada motion graphics demo reel' src='https://www.youtube.com/embed/UoGEM0D1xtU?autoplay=1' allowFullScreen></Video>
+          <CloseButton size='36' title='Close modal' onClick={(e)=>this.closeModal(e)}/>
+        </StyledModal>
+        
+        {/* <BgModal show={this.state.isOpen}>
           <ContentModal>
-            <CloseButton size='36' title='Close modal' />
+            <CloseButton size='36' title='Close modal' onClick={this.closeModal}/>
             <Video title='Mel Quesada motion graphics demo reel' src='https://www.youtube.com/embed/UoGEM0D1xtU?autoplay=1' allowFullScreen></Video>
           </ContentModal>
-        </BgModal>
+        </BgModal> */}
         {this.renderActive()}
+        <ButtonsContainer>
         <SelectProject projects={projects} handleChange={this.handleChange} />
-        <OpenButton><PlayIcon size='36'/></OpenButton>
+        <OpenButton onClick={(e)=>this.openModal(e)} title='Motion Graphics Demo Reel'><PlayIcon size='36'/></OpenButton>
+        </ButtonsContainer>
       </MainContainer>
     );
   }

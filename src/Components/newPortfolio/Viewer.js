@@ -9,6 +9,8 @@ const MainContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+
   /* flex-wrap: wrap; */
 
   margin: 5vh;
@@ -57,6 +59,8 @@ const MainViewer = styled.figure`
   background-color: white;
   width: 60%;
   height: 80%;
+  box-sizing: border-box;
+
 `;
 
 const Description = styled.div`
@@ -71,6 +75,8 @@ const Description = styled.div`
   /* border: white solid 3px; */
   width: 20%;
   height: 80%;
+  box-sizing: border-box;
+
 `;
 
 const Thumbnail = styled.figure`
@@ -80,12 +86,14 @@ const Thumbnail = styled.figure`
   border-radius: 8px;
   margin: 0;
   box-shadow: inset 0 8px 2px -6px #858585;
+  box-sizing: border-box;
+
   /* box-shadow: inset 0 3px 3px #858585; */
   border-left: #22e0eb ridge 2px;
   border-bottom: #22e0eb ridge 2px;
   border-top: #1b6ec3 groove 3px;
   border-right: #1b6ec3 groove 3px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, .9);
   width: 100%;
   height: 40%;
 `;
@@ -101,9 +109,9 @@ const TextContainer = styled.div`
   border-top: #1b6ec3 groove 3px;
   border-right: #1b6ec3 groove 3px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .9);
   box-shadow: inset 0 3px 2px -2px #858585;
-
+  box-sizing: border-box;
 `;
 
 const Links = styled.a`
@@ -123,13 +131,16 @@ const IconContainer = styled.div`
   border-top: #1b6ec3 groove 3px;
   border-right: #1b6ec3 groove 3px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .9);
   box-shadow: inset 0 3px 2px -2px #858585;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 `;
 
 const Icon = styled.img`
-  margin: 1em;
-  height: 3em;
+  margin: 5%;
+  height: 70%;
   width: auto;
 `;
 
