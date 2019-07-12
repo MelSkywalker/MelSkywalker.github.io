@@ -48,7 +48,7 @@ const MainViewer = styled.figure`
   align-items: center;
   box-shadow: inset 0 6px 3px -3px #858585;
   /* box-shadow: inset 0 3px 3px #858585; */
-  
+
   border-left: #22e0eb ridge 3px;
   border-bottom: #22e0eb ridge 3px;
   border-top: #1b6ec3 groove 5px;
@@ -60,13 +60,12 @@ const MainViewer = styled.figure`
   width: 60%;
   height: 80%;
   box-sizing: border-box;
-
 `;
 
 const Description = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   margin: 0 2em 0 2em;
@@ -76,7 +75,6 @@ const Description = styled.div`
   width: 20%;
   height: 80%;
   box-sizing: border-box;
-
 `;
 
 const Thumbnail = styled.figure`
@@ -104,7 +102,29 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
 
+  margin: 0;
+  padding: 0 .5vw;
   width: 100%;
+  height: 50%;
+  border: #22e0eb ridge 2px;
+  border-top: #1b6ec3 groove 3px;
+  border-right: #1b6ec3 groove 3px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: inset 0 3px 2px -2px #858585;
+  box-sizing: border-box;
+`;
+
+const ProjectLinkContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0 .5vw;
+  width: 100%;
+  height: 20%;
   border: #22e0eb ridge 2px;
   border-top: #1b6ec3 groove 3px;
   border-right: #1b6ec3 groove 3px;
@@ -125,7 +145,7 @@ const IconContainer = styled.div`
   justify-content: center;
   align-content: center;
   width: 100%;
-  height: 10%;
+  height: 20%;
 
   border: #22e0eb ridge 2px;
   border-top: #1b6ec3 groove 3px;
@@ -155,11 +175,12 @@ const LogoPicture = styled.img`
 `;
 
 const ProjectTitle = styled.h2`
+  margin: 0;
   text-align: center;
 `;
 
 const ProjectBody = styled.p`
-  margin: 2em;
+  margin: 1vh 0;
 `;
 
 const Viewer = ({
@@ -174,26 +195,26 @@ const Viewer = ({
   return (
     <MainContainer>
       <MainViewer>
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel ="noopener noreferrer">
           <ProjectPicture src={picture} />
         </a>
       </MainViewer>
       <Description>
-        <Thumbnail>
+        {/* <Thumbnail>
           <LogoPicture src={logo} />
-        </Thumbnail>
+        </Thumbnail> */}
         <TextContainer>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectBody>{description}</ProjectBody>
         </TextContainer>
-        <TextContainer>
-          <Links href={link} target="_blank">
+        <ProjectLinkContainer>
+          <Links href={link} target="_blank" rel ="noopener noreferrer">
             <LinkExternal size="24" color="black" /> Project
           </Links>
-          <Links href={repository} target="_blank">
+          {/* <Links href={repository} target="_blank" rel ="noopener noreferrer">
             <Github size="24" color="black" /> Repository
-          </Links>
-        </TextContainer>
+          </Links> */}
+        </ProjectLinkContainer>
         <IconContainer>
           {tools.map(tool => {
             return <Icon src={tool} />;

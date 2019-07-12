@@ -1,24 +1,44 @@
 [
     {
-       "skill": "Javascript"
-       
-   },
-   {
-       "skill": "HTML5"
-   },
-   {
-        "skill": "CSS3"
+        "name": "Javascript, "
     },
     {
-        "skill": "React JS"
+        "name":"HTML5, "
     },
     {
-        "skill": "Node JS"
+        "name":"CSS3, "
     },
     {
-        "skill": "Firebase"
+        "name":"React JS,  "
     },
     {
-        "skill": "Git"
+        "name":"Node JS, "
+    },
+    {
+        "name":"Express JS, "
+    },
+    {
+        "name":"MongoDB, "
+    },
+    {
+        "name":"Firebase, "
+    },
+    {
+        "name":"Git, "
+    },
+    {
+        "name":"Github, "
+    },
+    {
+        "name":"JSON, "
+    },
+    {
+        "name":"TDD, "
+    },
+    {
+        "name":"Jest, "
+    },
+    {
+        "name":"Responsive design "
     }
 ]

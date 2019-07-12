@@ -107,7 +107,8 @@ const OpenButton = styled.button`
   height: 8vh;
   border-radius: 50%;
   cursor: pointer;
-  margin: 2vw;
+  /* margin-left: 2vw;
+  margin-right: .5vw; */
 `;
 
 const PlayIcon = styled(Play)`
@@ -118,7 +119,22 @@ const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
+`;
+
+const PlayContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+  margin: 0 2vh;
+`;
+
+const PlayP = styled.p`
+  margin: 0 1vh;
+  /* width: 8vh; */
+  /* margin-top: 1vh; */
 `;
 
 class Portfolio extends Component {
@@ -174,7 +190,6 @@ class Portfolio extends Component {
           <Video title='Mel Quesada motion graphics demo reel' src='https://www.youtube.com/embed/UoGEM0D1xtU?autoplay=1' allowFullScreen></Video>
           <CloseButton size='36' title='Close modal' onClick={(e)=>this.closeModal(e)}/>
         </StyledModal>
-        
         {/* <BgModal show={this.state.isOpen}>
           <ContentModal>
             <CloseButton size='36' title='Close modal' onClick={this.closeModal}/>
@@ -184,7 +199,10 @@ class Portfolio extends Component {
         {this.renderActive()}
         <ButtonsContainer>
         <SelectProject projects={projects} handleChange={this.handleChange} />
-        <OpenButton onClick={(e)=>this.openModal(e)} title='Motion Graphics Demo Reel'><PlayIcon size='36'/></OpenButton>
+        <PlayContainer>
+          <OpenButton onClick={(e)=>this.openModal(e)} title='Motion Graphics Demo Reel'><PlayIcon size='36'/></OpenButton>
+          <PlayP>Play MoGraph Reel</PlayP>
+        </PlayContainer>
         </ButtonsContainer>
       </MainContainer>
     );

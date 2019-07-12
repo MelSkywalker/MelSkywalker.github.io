@@ -1,7 +1,7 @@
  [
      {
         "title": "Pokedex Go!",
-        "description": "This a Pokedex webApp which show Pokemon Go data from the 1st gen of Pokemon.",
+        "description": "This a Pokedex webApp which shows Pokemon Go data from the 1st gen of Pokemon.",
         "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
         "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
         "tools": [
@@ -22,5 +22,4 @@
         "logo": "https://a.imge.to/2019/06/28/gOJD6.png",
         "picture": "https://a.imge.to/2019/06/28/gO81q.png"
     }
-    ]
-    
+]

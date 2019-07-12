@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import itSkills from './About/itskills.json';
 import mgSkills from './About/mgskills.json';
 import softSkills from './About/softskills.json';
+import mSkills from './About/mskills.json';
+import mgSoftware from './About/mgsoftware.json';
 import Resume from './About/cv.js';
 import {Javascript} from 'styled-icons/boxicons-logos/Javascript';
 import {Html5} from 'styled-icons/boxicons-logos/Html5';
@@ -19,7 +21,8 @@ const MainContainer = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 2em;
-    margin-left: 4em;
+    margin-left: 10%;
+    margin-right: 8%;
 `;
 
 const Container = styled.div`
@@ -39,16 +42,13 @@ const P = styled.p`
 `;
 
 const List = styled.ul`
+    list-style: none;
+    margin-top: 0;
 `;
 
-const ItemIT = styled.li`
-}`;
-
-const ItemMg = styled.li`
-}`;
-
-const ItemSoft = styled.li`
-}`;
+const ListItem = styled.li`
+    display: inline;
+`;
 
 
 const About = () => {
@@ -58,7 +58,12 @@ const About = () => {
             <Container>
                 <P>My name is Melisa Quesada. I am a Frontend developer but also a Motion designer.</P>
                 <P>I describe myself as a creative problem solver.</P>
-                <Javascript/> <Html5/> <Css3/> <ReactLogo/> <Nodejs/> <Git/> <Github/>
+                <P>My skills: </P>
+                <List>{mSkills.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
+                <List>{itSkills.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
+                <List>{mgSkills.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
+                <List>{mgSoftware.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
+                <List>{softSkills.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
             </Container>
             {/* <Container>
                 <P>Hello! My name is Melisa Quesada but you can call me Mel.</P>

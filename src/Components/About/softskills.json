@@ -1,18 +1,29 @@
 [
     {
-       "skill": "Creative"
-       
+       "name": "Creative, "
    },
    {
-       "skill": "Problem solver"
+       "name": "Problem solver, "
    },
    {
-        "skill": "Self-taught"
+        "name": "Self-taught, "
     },
     {
-        "skill": "Assertive communication"
+        "name": "Assertive communication, "
     },
     {
-        "skill": "Collaborative"
+        "name": "Collaborative, "
+    },
+    {
+        "name": "Adaptability, "
+    },
+    {
+        "name": "Strategic thinking, "
+    },
+    {
+        "name": "Resolutive, "
+    },
+    {
+        "name": "Effective time management "
     }
 ]

@@ -1,24 +1,20 @@
 [
     {
-       "skill": "Adobe Illustrator"
-       
-   },
-   {
-       "skill": "Adobe Photoshop"
-   },
-   {
-        "skill": "Adobe After Effects"
+        "name": "Motion graphics, "
     },
     {
-        "skill": "Adobe Premiere Pro"
+        "name": "2d animation,  "
     },
     {
-        "skill": "Autodesk Maya"
+        "name": "3d animation, "
     },
     {
-        "skill": "Blender"
+        "name": "3d modeling, "
     },
     {
-        "skill": "Cinema 4D"
+        "name": "Video editing, "
+    },
+    {
+        "name": "DSLR camera photography "
     }
 ]
