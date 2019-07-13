@@ -42,7 +42,7 @@ const Button = styled.button`
 
 const Cv = () => {
     return(
-        <a href="https://drive.google.com/file/d/1XltLHcSYtxnMb6J3mXRDAL-h5AdNyIaZ/view?usp=sharing" target="_blank" rel ="noopener noreferrer">
+        <a href="https://www.dropbox.com/s/sdcefdfp1x62cew/melisa%20quesada%20cv%20frontend.pdf?dl=0" target="_blank" rel ="noopener noreferrer">
         <Button>Read my resume!</Button>
         </a>
     );
