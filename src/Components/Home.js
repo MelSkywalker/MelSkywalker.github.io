@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Vector2 } from 'three';
 import styled from 'styled-components';
 
-import Test3 from './Home/test.3';
+import Test3 from './Home/test.3 copy';
 
 const MainContainer = styled.div`
     display: flex;

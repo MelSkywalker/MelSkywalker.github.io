@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import ColladaLoader from 'three-collada-loader';
-// import { OrbitControls } from '@workswithweb/threejs-orbit-controls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import gltfPath from './assets/Parrot.glb';
 
 //Use three.js inside container
 export default class ThreeScene extends Component {
@@ -11,96 +11,72 @@ export default class ThreeScene extends Component {
         this.addCustomSceneObjects();
         this.startAnimationLoop();
 
-        // window.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('resize', this.handleWindowResize);
     }
 
     componentWillUnmount() {
         window.cancelAnimationFrame(this.requestID);
         window.removeEventListener('resize', this.handleWindowResize);
-        // this.controls.dispose();
     }
 
     sceneSetup = () => {
         //get conainter dimensions
-        // const width = this.mount.clientWidth;
-        // const height = this.mount.clientHeight;
         const width = window.innerWidth;
         const height = window.innerHeight;
         const fieldOfView = 75;
         const aspectRatio = width / height;
-        const nearPlane = 0.1;
-        const farPlane = 1000;
+        const nearPlane = 1;
+        const farPlane = 100;
 
         this.scene = new THREE.Scene();
+        this.clock = new THREE.Clock();
+        // this.scene.background = new THREE.Color( 0x8FBCD4 );
 
         this.camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-        this.camera.position.z = 5;
-        // this.controls = new OrbitControls( this.camera, this.mount );
+        this.camera.position.z = 85;
 
         this.renderer = new THREE.WebGLRenderer({ alpha: true });
         this.renderer.setSize(width, height);
         this.mount.appendChild(this.renderer.domElement);
     };
 
-    //Use const for local variables and Class forproperties for objects that should be accesible across the Components
+    //Use const for local variables and Class properties for objects that should be accesible across the Components
     addCustomSceneObjects = () => {
-        const loader = new ColladaLoader();
-        loader.load('./assets/catanim2.dae', function (collada) {
-            const gem = collada.
-        })
+        this.loader = new GLTFLoader();
+        this.loader.load(gltfPath, (gltf) => {
+            this.mixer = new THREE.AnimationMixer(gltf.scene);
+            gltf.animations.forEach(clip => this.mixer.clipAction(clip).play());
+            this.scene.add(gltf.scene);
+            console.log(gltf);
+            this.parrot = gltf.scene.children[0];
+        }, undefined, err => console.error(err));
 
-        const geometry = new THREE.BoxGeometry(2, 2, 2);
-        const material = new THREE.MeshPhongMaterial({
-            color: 0x156289,
-            emissive: 0x072534,
-            side: THREE.DoubleSide,
-            flatShading: true
-        });
-        //cube is not local because it might be animated later
-        this.cube = new THREE.Mesh(geometry, material);
-        // this.cube.position.x = 1.5;
-        this.scene.add(this.cube);
+        const ambientLight = new THREE.HemisphereLight(0xddeeff, 0x0f0e0d, 5);
+        const mainLight = new THREE.DirectionalLight(0xffffff, 5);
+        mainLight.position.set(10,10,10);
 
-        const lights = [];
-        lights[0] = new THREE.PointLight(0xffffff, 1, 0);
-        lights[1] = new THREE.PointLight(0xffffff, 1, 0);
-        lights[2] = new THREE.PointLight(0xffffff, 1, 0);
+        this.scene.add(ambientLight, mainLight);
 
-        lights[0].position.set(0, 200, 0);
-        lights[1].position.set(100, 200, 100);
-        lights[2].position.set(- 100, - 200, - 100);
-
-        this.scene.add(lights[0]);
-        this.scene.add(lights[1]);
-        this.scene.add(lights[2]);
-
-        // this.mouse = new THREE.Vector2();
         this.target = new THREE.Vector2();
-        // this.windowHalf = new THREE.Vector2(window.innerWidth / 2, window.innerHeight / 2);
     };
 
     startAnimationLoop = () => {
-        // this.cube.rotation.x += 0.01;
-        // this.cube.rotation.y += 0.01;
-
         this.target.x = (this.props.mouseX) * 0.003;
-        // this.target.x = (this.mouse.x) * 0.003;
-
         //This line makes the camera rotate in the Y axis
         this.target.y = (this.props.mouseY) * 0.003;
-        // this.target.y = (this.mouse.y) * 0.003;
 
-        this.cube.rotation.x += 0.05 * (this.target.y - this.cube.rotation.x);
-        this.cube.rotation.y += 0.05 * (this.target.x - this.cube.rotation.y);
+        // this.parrot.rotation.x += 0.05 * (this.target.y - this.parrot.rotation.x);
+        // this.parrot.rotation.y += 0.05 * (this.target.x - this.parrot.rotation.y);
 
         this.renderer.render(this.scene, this.camera);
         this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
+        var delta = this.clock.getDelta();
+        if(this.mixer) {
+            this.mixer.update(delta);
+        }
     };
 
     handleWindowResize = () => {
-        // const width = this.mount.clientWidth;
-        // const height = this.mount.clientHeight;
         const width = window.innerWidth;
         const height = window.innerHeight;
         this.renderer.setSize(width, height);
@@ -108,19 +84,9 @@ export default class ThreeScene extends Component {
         this.camera.updateProjectionMatrix();
     }
 
-    // handleMouseMove = (e) => {
-    //     console.log('on mouse move');
-    //     //this.mouse.x = (e.clientX - this.windowHalf.x);
-    //     this.mouse.x = this.props.mouseX;
-    //     //this.mouse.y = (e.clientY - this.windowHalf.x);
-    //     this.mouse.y = this.props.mouseY;
-    // }
-
     render() {
         return (
             <div ref={ref => (this.mount = ref)}
-            // onMouseMove = { this.props.handleMouseMove }
-            // style= {{ position: 'absolute' }}
             style={{ position: 'relative', zIndex: '-5'}}
             />
         )

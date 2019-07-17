@@ -21,6 +21,7 @@
     "styled-components": "^4.3.1",
     "styled-icons": "^8.1.0",
     "three": "^0.105.2",
+    "three-collada-loader": "0.0.1",
     "three-collada-loader-ds": "0.0.1"
   },
   "scripts": {
