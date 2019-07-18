@@ -30,7 +30,6 @@ export default class ThreeScene extends Component {
 
         this.scene = new THREE.Scene();
         this.clock = new THREE.Clock();
-        // this.scene.background = new THREE.Color( 0x8FBCD4 );
 
         this.camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         this.camera.position.z = 85;
@@ -43,7 +42,7 @@ export default class ThreeScene extends Component {
     //Use const for local variables and Class properties for objects that should be accesible across the Components
     addCustomSceneObjects = () => {
         this.loader = new GLTFLoader();
-        this.loader.load(gltfPath, (gltf) => {
+        this.parrot = this.loader.load(gltfPath, (gltf) => {
             this.mixer = new THREE.AnimationMixer(gltf.scene);
             gltf.animations.forEach(clip => this.mixer.clipAction(clip).play());
             this.scene.add(gltf.scene);
@@ -62,11 +61,9 @@ export default class ThreeScene extends Component {
 
     startAnimationLoop = () => {
         this.target.x = (this.props.mouseX) * 0.003;
-        //This line makes the camera rotate in the Y axis
-        this.target.y = (this.props.mouseY) * 0.003;
 
-        // this.parrot.rotation.x += 0.05 * (this.target.y - this.parrot.rotation.x);
-        // this.parrot.rotation.y += 0.05 * (this.target.x - this.parrot.rotation.y);
+        //This line makes the camera rotate in the Y axis
+        // this.target.y = (this.props.mouseY) * 0.001;
 
         this.renderer.render(this.scene, this.camera);
         this.requestID = window.requestAnimationFrame(this.startAnimationLoop);
@@ -74,7 +71,12 @@ export default class ThreeScene extends Component {
         if(this.mixer) {
             this.mixer.update(delta);
         }
+        if(this.parrot){
+            this.parrot.rotation.x += 0.05 * (this.target.y - this.parrot.rotation.x);
+            this.parrot.rotation.y += 0.05 * (this.target.x - this.parrot.rotation.y);
+        }
     };
+
 
     handleWindowResize = () => {
         const width = window.innerWidth;
