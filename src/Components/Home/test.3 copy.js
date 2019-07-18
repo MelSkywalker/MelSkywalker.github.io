@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import gltfPath from './assets/Parrot.glb';
+import gltfPath from './assets/cat2.glb';
 
 //Use three.js inside container
 export default class ThreeScene extends Component {
@@ -32,7 +32,10 @@ export default class ThreeScene extends Component {
         this.clock = new THREE.Clock();
 
         this.camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-        this.camera.position.z = 85;
+        this.camera.position.z = 10;
+        this.camera.position.y = 3;
+        this.camera.position.x = -20;
+        this.camera.rotation.y = -1;
 
         this.renderer = new THREE.WebGLRenderer({ alpha: true });
         this.renderer.setSize(width, height);
@@ -41,20 +44,28 @@ export default class ThreeScene extends Component {
 
     //Use const for local variables and Class properties for objects that should be accesible across the Components
     addCustomSceneObjects = () => {
+
         this.loader = new GLTFLoader();
-        this.parrot = this.loader.load(gltfPath, (gltf) => {
+        this.cat = this.loader.load(gltfPath, (gltf) => {
             this.mixer = new THREE.AnimationMixer(gltf.scene);
             gltf.animations.forEach(clip => this.mixer.clipAction(clip).play());
             this.scene.add(gltf.scene);
             console.log(gltf);
-            this.parrot = gltf.scene.children[0];
+            this.cat = gltf.scene.children[0];
         }, undefined, err => console.error(err));
 
-        const ambientLight = new THREE.HemisphereLight(0xddeeff, 0x0f0e0d, 5);
-        const mainLight = new THREE.DirectionalLight(0xffffff, 5);
-        mainLight.position.set(10,10,10);
+        const lights = [];
+        lights[0] = new THREE.PointLight(0xffffff, 1, 0);
+        lights[1] = new THREE.PointLight(0xffffff, 1, 0);
+        lights[2] = new THREE.PointLight(0xffffff, 1, 0);
 
-        this.scene.add(ambientLight, mainLight);
+        lights[0].position.set(0, 200, 0);
+        lights[1].position.set(100, 200, 100);
+        lights[2].position.set(- 100, - 200, - 100);
+
+        this.scene.add(lights[0]);
+        this.scene.add(lights[1]);
+        this.scene.add(lights[2]);
 
         this.target = new THREE.Vector2();
     };
@@ -71,9 +82,9 @@ export default class ThreeScene extends Component {
         if(this.mixer) {
             this.mixer.update(delta);
         }
-        if(this.parrot){
-            this.parrot.rotation.x += 0.05 * (this.target.y - this.parrot.rotation.x);
-            this.parrot.rotation.y += 0.05 * (this.target.x - this.parrot.rotation.y);
+        if(this.cat){
+            this.cat.rotation.x += 0.05 * (this.target.y - this.cat.rotation.x);
+            this.cat.rotation.y += 0.05 * (this.target.x - this.cat.rotation.y);
         }
     };
 
