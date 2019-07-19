@@ -25,8 +25,8 @@ const Container = styled.div`
 const Title = styled.h1`
     font-family: 'Audiowide', cursive;
     font-weight: normal;
-    font-size: 5em;
-    text-align: left;
+    font-size: 10vh;
+    text-align: center;
     /* color: aliceblue; */
     margin-top: 0;
     margin-bottom: 0;
@@ -39,9 +39,9 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
     font-family: 'Syncopate', sans-serif;
-    font-size: 1.8em;
+    font-size: 3vh;
     font-weight: lighter;
-    text-align: left;
+    text-align: center;
     /* color: aliceblue; */
     text-transform: uppercase;
     background: linear-gradient(to right, #e588d3 0%, #9f56cc 100%);

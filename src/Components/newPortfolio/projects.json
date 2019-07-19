@@ -21,5 +21,16 @@
         ],
         "logo": "https://a.imge.to/2019/06/28/gOJD6.png",
         "picture": "https://a.imge.to/2019/06/28/gO81q.png"
+    },
+    {
+        "title": "Marvelpedia",
+        "description": "This informative website provides the right order for watching every movie from the Marvel Cinematic Universe.",
+        "link": "https://melskywalker.github.io/GDL002-hackathon-interna/",
+        "repository": "https://github.com/MelSkywalker/GDL002-hackathon-interna",
+        "tools": [
+            "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png"
+        ],
+        "logo": "https://b.imge.to/2019/07/19/5cont.png",
+        "picture": "https://a.imge.to/2019/07/19/5c7qZ.png"
     }
 ]

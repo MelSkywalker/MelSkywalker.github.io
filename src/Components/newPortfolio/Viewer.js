@@ -217,7 +217,7 @@ const Viewer = ({
         </ProjectLinkContainer>
         <IconContainer>
           {tools.map(tool => {
-            return <Icon src={tool} />;
+            return <Icon key={tool} src={tool} />;
           })}
         </IconContainer>
       </Description>
