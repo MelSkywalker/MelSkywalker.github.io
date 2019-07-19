@@ -23,10 +23,11 @@ const Container = styled.div`
     width: 80%;
     padding: 1em;
     border-radius: 20px;
-    background-image: linear-gradient(#42f5d7, #17e5e8);
+    background-color: #1b6ec3;
+    background-image: linear-gradient(#1b6ec3, #22e0eb);
     box-shadow: 0px 1px 4px -2px #333;
-    border-bottom: #17e5e8 ridge 7px;
-    border-left: #17e5e8 groove 7px;
+    border-bottom: #1b6ec3 ridge 7px;
+    border-left: #1b6ec3 groove 7px;
 `;
 
 const P = styled.p`

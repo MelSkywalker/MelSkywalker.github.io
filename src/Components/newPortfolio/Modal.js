@@ -13,7 +13,6 @@ const BgModal = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
-  /* display: none; */
 `;
 
 const ContentModal = styled.div`
