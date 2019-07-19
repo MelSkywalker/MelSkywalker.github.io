@@ -37,8 +37,10 @@ padding: 2em;
 
 const Title = styled.label`
     align-self: center;
-    margin-bottom: 1em;
+    margin-bottom: 1vh;
     color: #fde892;
+    font-size: 3.5vh;
+    color: #30CFD0;
 `;
 
 const Div = styled.div`

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 20%;
   background-color: #c23cc6;
   background-image: linear-gradient(#f1ed7b, #f5e342);
 
@@ -20,7 +20,7 @@ const Button = styled.button`
 
 const Cv = () => {
     return(
-        <a href="https://drive.google.com/file/d/1XltLHcSYtxnMb6J3mXRDAL-h5AdNyIaZ/view?usp=sharing" target="_blank" rel ="noopener noreferrer">
+        <a href="https://www.dropbox.com/s/sdcefdfp1x62cew/melisa%20quesada%20cv%20frontend.pdf?dl=0" target="_blank" rel ="noopener noreferrer">
         <Button>Download my resume!</Button>
         </a>
     );

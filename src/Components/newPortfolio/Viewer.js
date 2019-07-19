@@ -108,6 +108,7 @@ const ProjectLinkContainer = styled.div`
 `;
 
 const Links = styled.a`
+  font-family: 'Lato', sans-serif; 
   text-align: center;
   padding: 0.5em;
 `;
@@ -176,7 +177,9 @@ const Viewer = ({
           <Links href={link} target="_blank" rel ="noopener noreferrer">
             <LinkExternal size="24" color="black" /> Project
           </Links>
-
+          <Links href={repository} target="_blank" rel ="noopener noreferrer">
+            <LinkExternal size="24" color="black" /> Repository
+          </Links>
         </ProjectLinkContainer>
         <IconContainer>
           {tools.map(tool => {
