@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
 
 const Form = styled.form`
@@ -121,7 +120,6 @@ class NewForm extends Component {
             message: this.state.message,
         }
         fetch('http://mel-portfolio-backend.herokuapp.com/', {
-        // fetch('http://localhost:3001/', {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -129,14 +127,6 @@ class NewForm extends Component {
             }
         }).then(res => {this.setState({ sent: true }, this.resetForm())})
         .catch(err => console.log('Fetch error: ', err))
-
-        // axios.post('https://portfoliobe.herokuapp.com/', data)
-        //     .then( res => {
-        //         this.setState({ sent: true }, this.resetForm())
-        //     })
-        //     .catch( () => {
-        //         console.log('Message not sent')
-        //     })
     }
 
     resetForm = () => {

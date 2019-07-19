@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Github } from "styled-icons/boxicons-logos";
 import { LinkExternal } from "styled-icons/boxicons-regular";
-import { Link } from "styled-icons/feather";
 
 const MainContainer = styled.div`
   display: flex;
@@ -11,13 +9,10 @@ const MainContainer = styled.div`
   align-items: center;
   box-sizing: border-box;
 
-  /* flex-wrap: wrap; */
-
   margin: 5vh;
   height: 65vh;
   width: 60vw;
   position: relative;
-  /* display: inline-block; */
   background-color: #1b6ec3;
   background-image: linear-gradient(#1b6ec3, #22e0eb);
 
@@ -47,7 +42,6 @@ const MainViewer = styled.figure`
   justify-content: center;
   align-items: center;
   box-shadow: inset 0 6px 3px -3px #858585;
-  /* box-shadow: inset 0 3px 3px #858585; */
 
   border-left: #22e0eb ridge 3px;
   border-bottom: #22e0eb ridge 3px;
@@ -70,30 +64,9 @@ const Description = styled.div`
 
   margin: 0 2em 0 2em;
   border-radius: 4px;
-  /* padding-right: 2em; */
-  /* border: white solid 3px; */
   width: 20%;
   height: 80%;
   box-sizing: border-box;
-`;
-
-const Thumbnail = styled.figure`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  margin: 0;
-  box-shadow: inset 0 8px 2px -6px #858585;
-  box-sizing: border-box;
-
-  /* box-shadow: inset 0 3px 3px #858585; */
-  border-left: #22e0eb ridge 2px;
-  border-bottom: #22e0eb ridge 2px;
-  border-top: #1b6ec3 groove 3px;
-  border-right: #1b6ec3 groove 3px;
-  background-color: rgba(255, 255, 255, .9);
-  width: 100%;
-  height: 40%;
 `;
 
 const TextContainer = styled.div`
@@ -169,11 +142,6 @@ const ProjectPicture = styled.img`
   max-height: 100%;
 `;
 
-const LogoPicture = styled.img`
-  max-width: 80%;
-  max-height: 80%;
-`;
-
 const ProjectTitle = styled.h2`
   margin: 0;
   text-align: center;
@@ -200,9 +168,6 @@ const Viewer = ({
         </a>
       </MainViewer>
       <Description>
-        {/* <Thumbnail>
-          <LogoPicture src={logo} />
-        </Thumbnail> */}
         <TextContainer>
           <ProjectTitle>{title}</ProjectTitle>
           <ProjectBody>{description}</ProjectBody>
@@ -211,9 +176,7 @@ const Viewer = ({
           <Links href={link} target="_blank" rel ="noopener noreferrer">
             <LinkExternal size="24" color="black" /> Project
           </Links>
-          {/* <Links href={repository} target="_blank" rel ="noopener noreferrer">
-            <Github size="24" color="black" /> Repository
-          </Links> */}
+
         </ProjectLinkContainer>
         <IconContainer>
           {tools.map(tool => {

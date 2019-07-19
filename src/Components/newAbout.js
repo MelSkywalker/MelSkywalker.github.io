@@ -6,14 +6,6 @@ import softSkills from './About/softskills.json';
 import mSkills from './About/mskills.json';
 import mgSoftware from './About/mgsoftware.json';
 import Resume from './About/cv.js';
-import {Javascript} from 'styled-icons/boxicons-logos/Javascript';
-import {Html5} from 'styled-icons/boxicons-logos/Html5';
-import {Css3} from 'styled-icons/boxicons-logos/Css3';
-import {ReactLogo} from 'styled-icons/boxicons-logos/ReactLogo';
-import {Nodejs} from 'styled-icons/boxicons-logos/Nodejs';
-import {Git} from 'styled-icons/boxicons-logos/Git';
-import {Github} from 'styled-icons/boxicons-logos/Github';
-// import {FileJson} from ' styled-icons/boxicons-solid/FileJson';
 
 const MainContainer = styled.div`
     display: flex;
@@ -29,7 +21,6 @@ const Container = styled.div`
     margin: 0;
     padding: 0;
     width: 80%;
-    /* height: 50%; */
     padding: 1em;
     border-radius: 20px;
     background-image: linear-gradient(#42f5d7, #17e5e8);
@@ -65,24 +56,6 @@ const About = () => {
                 <List>{mgSoftware.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
                 <List>{softSkills.map(skill => <ListItem key={skill.name}>{skill.name} </ListItem>)}</List>
             </Container>
-            {/* <Container>
-                <P>Hello! My name is Melisa Quesada but you can call me Mel.</P>
-                <P>I am a Frontend Developer but also a Motion designer!</P>
-                <P>I describe myself as a creative problem solver.</P>
-            </Container>
-            <Container>
-                <P>My technical skills:</P>
-                <List>
-                    {itSkills.map(skill => <ItemIT key={skill.skill}>{skill.skill}</ItemIT>)}
-                    {mgSkills.map(skill => <ItemMg key={skill.skill}>{skill.skill}</ItemMg>)}
-                </List>
-            </Container>
-            <Container>
-                <P>My soft skills:</P>
-                <List>
-                    {softSkills.map(skill => <ItemSoft key={skill.skill}>{skill.skill}</ItemSoft>)}
-                </List>
-            </Container> */}
         </MainContainer>
     );
 };

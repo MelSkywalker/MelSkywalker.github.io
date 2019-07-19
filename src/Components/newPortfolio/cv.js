@@ -13,7 +13,6 @@ const Button = styled.button`
   background-color: #c23cc6;
   background-image: linear-gradient(#f1ed7b, #f5e342);
 
-  /* background-image: linear-gradient(#fcdf38, #f5e342); */
   border-radius: 25px;
   box-shadow: 0px 1px 4px -2px #333;
   text-shadow: 0px -1px #333;
@@ -34,7 +33,6 @@ const Button = styled.button`
   }
 
   &:hover {
-    /* background-image: linear-gradient(#f6ff00, #fcdf38); */
     background-image: linear-gradient(#fcdf38, #f5e342);
 
   }
@@ -49,6 +47,3 @@ const Cv = () => {
 };
 
 export default Cv;
-
-/* @include btn-variant(#1e88e5, #64b5f6, #42a5f5, #bbdefb, #e3f2fd, #90caf9, #1976d2); */
-

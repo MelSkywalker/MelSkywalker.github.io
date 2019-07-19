@@ -5,35 +5,6 @@ import { Home } from 'styled-icons/fa-solid/Home';
 import { Images } from 'styled-icons/fa-solid/Images';
 import { Envelope } from 'styled-icons/fa-solid/Envelope';
 import { Person } from 'styled-icons/material/Person';
-// import style from './navigation.css';
-
-// const NavBar = styled.div`
-//     display: flex;
-//     flex-direction: raw;
-//     justify-content: flex-end;
-//     margin-right: 2em;
-// `;
-
-// const Navigation = () => {
-//     return(
-//         <NavBar>
-//             <NavLink to='/'className='NavLink' >Home</NavLink>
-//             <NavLink to='/portfolio'className='NavLink' >Portfolio</NavLink>
-//             <NavLink to='/about'className='NavLink' >Get to know me!</NavLink>
-//             <NavLink to='/contact'className='NavLink' >Hire me!</NavLink>
-//         </NavBar>
-//     );
-// };
-
-const Nav = styled.nav`
-    height: 100%;
-    width: 3%;
-    background-color: yellow;
-    position: fixed;
-    z-index: 100;
-    
-`;
-
 
 const Menu = styled.ul`
     padding: 0;
@@ -108,8 +79,6 @@ const StyledEnvelope = styled(Envelope)`
         color: white;
     }
 `;
-
-
 
 const Navigation = () => {
     return(

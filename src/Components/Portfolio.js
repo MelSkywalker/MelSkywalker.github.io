@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Modal from 'react-modal';
-import { Close } from 'styled-icons/material/Close';
 import { WindowClose } from 'styled-icons/fa-solid/WindowClose';
 import { Play } from 'styled-icons/fa-solid/Play';
 
@@ -18,69 +17,10 @@ const MainContainer = styled.div`
   align-items: center;
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: wrap; */
-
-  margin: 5vh;
-  height: 65vh;
-  width: 70vw;
-  position: relative;
-  /* display: inline-block; */
-  background-color: #548fdf;
-  background-image: linear-gradient(#1b6ec3, #22e0eb);
-
-  border-radius: 40px;
-  box-shadow: 0px 1px 4px -2px #333;
-  text-shadow: 0px -1px #333;
-
-  &:after {
-    border-radius: 40px;
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 5%;
-    background: linear-gradient(
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.2)
-    );
-  }
-`;
-
-const BgModal = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  position: absolute;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  /* display: none; */
-`;
-
-const ContentModal = styled.div`
-  width: 50%;
-  height: 60%;
-  background-color: rgba(255,255,255,0);
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const StyledModal = styled(Modal)`
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.8);
-  /* position: absolute; */
   top: 0;
   display: flex;
   justify-content: center;
@@ -107,8 +47,6 @@ const OpenButton = styled.button`
   height: 8vh;
   border-radius: 50%;
   cursor: pointer;
-  /* margin-left: 2vw;
-  margin-right: .5vw; */
 `;
 
 const PlayIcon = styled(Play)`
@@ -133,8 +71,6 @@ const PlayContainer = styled.div`
 
 const PlayP = styled.p`
   margin: 0 1vh;
-  /* width: 8vh; */
-  /* margin-top: 1vh; */
 `;
 
 class Portfolio extends Component {
@@ -165,9 +101,7 @@ class Portfolio extends Component {
   handleChange = e => {
       const newActiveIndex = e.target.value;
       this.setState({ activeIndex: newActiveIndex });
-    console.log('handle change');
-    console.log(e.target.value);
-  }
+  };
 
   handleClick = e => {
     const newActiveIndex = e.target.getAttribute("data-index");
@@ -190,12 +124,6 @@ class Portfolio extends Component {
           <Video title='Mel Quesada motion graphics demo reel' src='https://www.youtube.com/embed/UoGEM0D1xtU?autoplay=1' allowFullScreen></Video>
           <CloseButton size='36' title='Close modal' onClick={(e)=>this.closeModal(e)}/>
         </StyledModal>
-        {/* <BgModal show={this.state.isOpen}>
-          <ContentModal>
-            <CloseButton size='36' title='Close modal' onClick={this.closeModal}/>
-            <Video title='Mel Quesada motion graphics demo reel' src='https://www.youtube.com/embed/UoGEM0D1xtU?autoplay=1' allowFullScreen></Video>
-          </ContentModal>
-        </BgModal> */}
         {this.renderActive()}
         <ButtonsContainer>
         <SelectProject projects={projects} handleChange={this.handleChange} />
@@ -208,14 +136,5 @@ class Portfolio extends Component {
     );
   }
 }
-
-// const Portfolio = ({title, description, link, repository, tools}) => {
-//     return (
-//         <MainContainer>
-//             <Viewer/>
-//             <SelectProject/>
-//         </MainContainer>
-//     );
-// };
 
 export default Portfolio;

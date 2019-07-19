@@ -15,7 +15,6 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    /* margin-left: 8%; */
     position: absolute;
     top: 20%;
     padding-top: 0;
@@ -27,7 +26,6 @@ const Title = styled.h1`
     font-weight: normal;
     font-size: 10vh;
     text-align: center;
-    /* color: aliceblue; */
     margin-top: 0;
     margin-bottom: 0;
 
@@ -42,7 +40,6 @@ const Subtitle = styled.h2`
     font-size: 3vh;
     font-weight: lighter;
     text-align: center;
-    /* color: aliceblue; */
     text-transform: uppercase;
     background: linear-gradient(to right, #e588d3 0%, #9f56cc 100%);
     -webkit-background-clip: text;

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Form = styled.form`
-    /* margin: 3em; */
     padding: 2em;
     background-color: #666666;
     display: flex;
@@ -42,15 +41,6 @@ const Textarea = styled.textarea`
     font-family: 'Montserrat', sans-serif;
 `;
 
-// const Button = styled.button`
-//     margin: 0.5em;
-//     height: 3em;
-//     width: 20%;
-//     align-self: flex-end;
-//     font-family: 'Montserrat', sans-serif;
-//     font-weight: bold;
-// `;
-
 export default class ContactForm extends Component {
     render() {
         return(
@@ -61,7 +51,6 @@ export default class ContactForm extends Component {
                 </Div>
                 <InputSubject placeholder='Subject' required></InputSubject>
                 <Textarea placeholder='Message' required></Textarea>
-                {/* <Button type='submit'>SEND!</Button> */}
             </Form>
         )
     }
