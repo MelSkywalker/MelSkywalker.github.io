@@ -33,21 +33,20 @@
 } */
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #d6d6d6;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
 }
 
 html, body {
   margin: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
-h1, h2, h3, h4{
-  font-family: 'Syncopate', sans-serif;
-}
-
 
 #root {
   height: 100%;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: red;
 }

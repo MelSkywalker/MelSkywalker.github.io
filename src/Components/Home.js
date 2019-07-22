@@ -1,8 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Vector2 } from 'three';
 import styled from 'styled-components';
+import Portfolio from './Portfolio';
+import About from './newAbout';
+import Contact from './newContact';
 
-import Test3 from './Home/test.3 copy';
+const Section = styled.section`
+    height: 90%;
+    width: 100%;
+`;
 
 const MainContainer = styled.div`
     display: flex;
@@ -66,13 +72,19 @@ class Home extends Component {
 
     render() {
         return (
+            <Fragment>
+            <Section>
             <MainContainer onMouseMove={this.handleMouseMove}>
-                <Test3 mouseX={this.state.mouse.x} mouseY={this.state.mouse.y} windowHalf={this.windowHalf}/>
                 <Container>
                     <Title>MELISA QUESADA</Title>
                     <Subtitle>FRONT END DEVELOPER & MOTION DESIGNER</Subtitle>
                 </Container>
             </MainContainer>
+            </Section>
+            <Section><About></About></Section>
+            <Section><Portfolio></Portfolio></Section>
+            <Section><Contact></Contact></Section>
+            </Fragment>
         );
     }
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Home from './Components/Home';
+import Home from './Components/nHome';
 import Portfolio from './Components/Portfolio';
 import About from './Components/newAbout';
 import Err from './Components/Err';

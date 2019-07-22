@@ -1,5 +1,17 @@
 [
     {
+        "name":"Web design "
+    },
+    {
+        "name":"Website and web application development "
+    },
+    {
+        "name":"TDD "
+    },
+    {
+        "name":"Responsive design "
+    },
+    {
         "name": "Motion graphics "
     },
     {
@@ -13,8 +25,5 @@
     },
     {
         "name": "Video editing "
-    },
-    {
-        "name": "DSLR camera photography "
     }
 ]
