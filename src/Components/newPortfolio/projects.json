@@ -1,36 +1,36 @@
  [
      {
         "title": "Pokedex Go!",
-        "description": "This a Pokedex webApp which shows Pokemon Go data from the 1st gen of Pokemon.",
+        "description": "Pokedex web application that shows data from the 1st gen of Pokemon in the Pokemon Go game.",
         "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
         "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
         "tools": [
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png"
         ],
-        "logo": "https://a.imge.to/2019/06/15/P8GbF.png",
+        "logo": "https://i.imgur.com/IIX45qL.png",
         "picture": "https://a.imge.to/2019/06/28/gOVOr.png"
     },
     {
         "title": "Hacker News Alerts",
-        "description": "It tweets you alerts of the news of the topics you are interested in.",
+        "description": "Twitter bot that tweets the latest Facebook and Google news.",
         "link": "https://melskywalker.github.io/hn-Alerts/",
         "repository": "https://github.com/MelSkywalker/HNAlerts",
         "tools": [
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png",
             "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png"
         ],
-        "logo": "https://a.imge.to/2019/06/28/gOJD6.png",
+        "logo": "https://i.imgur.com/R7IHE80.png",
         "picture": "https://a.imge.to/2019/06/28/gO81q.png"
     },
     {
         "title": "Marvelpedia",
-        "description": "This informative website provides the right order for watching every movie from the Marvel Cinematic Universe.",
+        "description": "Informative website that provides the right order for watching every movie from the Marvel Cinematic Universe.",
         "link": "https://melskywalker.github.io/GDL002-hackathon-interna/",
         "repository": "https://github.com/MelSkywalker/GDL002-hackathon-interna",
         "tools": [
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png"
         ],
-        "logo": "https://b.imge.to/2019/07/19/5cont.png",
+        "logo": "https://i.imgur.com/3gL0HL4.png",
         "picture": "https://a.imge.to/2019/07/19/5c7qZ.png"
     }
 ]
