@@ -102,7 +102,7 @@ class Contact extends Component {
         subject: '',
         email: '',
         sent: false,
-        buttonText: 'SEND!'
+        buttonText: 'SEND ME A MESSAGE!'
     }
 
     formSubmit= (e) => {
@@ -141,11 +141,11 @@ class Contact extends Component {
             <Subtitle2>LET'S WORK TOGETHER!</Subtitle2>
             <Form onSubmit={ (e) => this.formSubmit(e) } enctype="multipart/form-data">
                 <Div>
-                    <InputName type="text" placeholder="Name" name="name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
-                    <InputName type="email" placeholder="E-mail" name="email" value={this.state.email} onChange={ e => this.setState({ email: e.target.value }) } required></InputName>
+                    <InputName type="text" placeholder="NAME" name="name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
+                    <InputName type="email" placeholder="E-MAIL" name="email" value={this.state.email} onChange={ e => this.setState({ email: e.target.value }) } required></InputName>
                 </Div>
-                <Input type="text" placeholder="Subject" name="subject" value={this.state.subject} onChange={ e => this.setState({ subject: e.target.value }) } required></Input>
-                <Textarea placeholder="Message" name="message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
+                <Input type="text" placeholder="SUBJECT" name="subject" value={this.state.subject} onChange={ e => this.setState({ subject: e.target.value }) } required></Input>
+                <Textarea placeholder="MESSAGE" name="message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
                 <Button type='submit'>{this.state.buttonText}</Button>
             </Form>
         </MainContainer>
