@@ -78,8 +78,9 @@ const CardTextContainer = styled.div`
 const ProjectText = styled.p`
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 20px;
     text-align: left;
+    margin: 10px 0;
 `;
 
 const ProjectTitle = styled.h3`
@@ -90,14 +91,26 @@ const ProjectTitle = styled.h3`
 `;
 
 const ProjectLink = styled.a`
-    color: white;
+    color: #e7529c;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 20px;
     text-align: left;
 `;
 
 const ProjectTool = styled.img`
-    height: 10%;
+    height: 50px;
+`;
+const RevealImg = styled.img`
+    width: 100%;
+`;
+
+const ToolsContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 30%;
+    padding-bottom: 10px;
 `;
 
 const Card = styled.div`
@@ -138,9 +151,16 @@ const CardContentB = styled.div`
     width: 100%;
     background-color: #303030;
     padding: 0 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
 `;
 
 const CardReveal = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     background-color: #d4009f;
     position: absolute;
     overflow: hidden;
@@ -175,15 +195,20 @@ const Portfolio = () => {
                     <ProjectText>{project.description}</ProjectText>
                     <ProjectText><ProjectLink href={project.link}>Link</ProjectLink></ProjectText>
                     <ProjectText><ProjectLink href={project.repository}>Repository</ProjectLink></ProjectText>
-                    {project.tools.map(tool => 
+                    <ToolsContainer>{project.tools.map(tool => 
                         <ProjectTool src={tool}></ProjectTool>
-                    )}
+                    )}</ToolsContainer>
                 </CardContentB>
             </CardContent>
-            <CardReveal></CardReveal>
+            <CardReveal><RevealImg src={project.picture2}></RevealImg></CardReveal>
         </Card>
         )}
-
+        <Footer>
+            <FooterNavLink to='/contact'>
+                <EmailIcon />
+                <FooterText>Send me an email!</FooterText>
+            </FooterNavLink>
+        </Footer>
     </MainContainer>
   );
 };

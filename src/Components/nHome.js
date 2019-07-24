@@ -69,6 +69,13 @@ const Img = styled.img`
     }
 `;
 
+const ScrollImg = styled.img`
+    position: absolute;
+    bottom: 10vh;
+    right: 10vh;
+    height: 180px;
+`;
+
 const Title = styled.h1`
     font-family: 'Josefin Sans', sans-serif;
     text-align: center;
@@ -240,6 +247,7 @@ const Home = () => {
                      <Link href='https://github.com/MelSkywalker' target="_blank" rel ="noopener noreferrer"><GithubIcon /></Link>
                      <Link href='https://www.linkedin.com/in/meldev/' target="_blank" rel ="noopener noreferrer"><LinkedinIcon /></Link>
                  </SocialNetworkContainer>
+                 <ScrollImg src='https://i.imgur.com/VD1cAop.png' />
             </Section>
             <Section2>
             <Subtitle2>SUMMARY</Subtitle2>
@@ -252,6 +260,7 @@ const Home = () => {
                  <ButtonLink href="https://www.dropbox.com/s/xd1pfzj9aa1ayve/mel%20quesada%20resume.pdf?dl=0" target="_blank" rel ="noopener noreferrer">
                     <Button>Take a look at my resume!</Button>
                 </ButtonLink>
+                <ScrollImg src='https://i.imgur.com/VD1cAop.png' />
             </Section2>
             <Section>
             <Subtitle2>SKILLS</Subtitle2>

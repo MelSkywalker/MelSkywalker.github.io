@@ -8,7 +8,8 @@
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png"
         ],
         "logo": "https://i.imgur.com/IIX45qL.png",
-        "picture": "https://a.imge.to/2019/06/28/gOVOr.png"
+        "picture": "https://a.imge.to/2019/06/28/gOVOr.png",
+        "picture2": "https://i.imgur.com/dRMuV2E.png"
     },
     {
         "title": "Hacker News Alerts",
@@ -17,10 +18,11 @@
         "repository": "https://github.com/MelSkywalker/HNAlerts",
         "tools": [
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png",
-            "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png"
+            "http://pluspng.com/img-png/nodejs-logo-png-create-a-model-to-persist-data-in-a-node-js-loopback-api-from-beeman-nl-on-eggheadio-1200.png"
         ],
         "logo": "https://i.imgur.com/R7IHE80.png",
-        "picture": "https://a.imge.to/2019/06/28/gO81q.png"
+        "picture": "https://a.imge.to/2019/06/28/gO81q.png",
+        "picture2": "https://i.imgur.com/uaMZAci.png"
     },
     {
         "title": "Marvelpedia",
@@ -31,6 +33,7 @@
             "https://programarfacil.com/wp-content/uploads/2015/07/js-logo.png"
         ],
         "logo": "https://i.imgur.com/3gL0HL4.png",
-        "picture": "https://a.imge.to/2019/07/19/5c7qZ.png"
+        "picture": "https://a.imge.to/2019/07/19/5c7qZ.png",
+        "picture2": "https://i.imgur.com/uXpezC6.png"
     }
 ]
