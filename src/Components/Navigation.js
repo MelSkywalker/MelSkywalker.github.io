@@ -13,10 +13,12 @@ const Menu = styled.ul`
   list-style: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 100;
 `;
 
 const NavigationLink = styled(NavLink)`
+  text-decoration: none;
   &:active {
     color: white;
   }
@@ -45,7 +47,7 @@ const DivMenu = styled.div`
 const Navigation = () => {
   return (
     <Menu>
-      <MenuItems><NavigationLink to="/">Home</NavigationLink></MenuItems>
+      <MenuItems><NavigationLink to="/">HOME</NavigationLink></MenuItems>
       <DivMenu>
         <MenuItems><NavigationLink to="/portfolio">Check out my work!</NavigationLink></MenuItems>
         <MenuItems><NavigationLink to="/contact">Let's talk!</NavigationLink></MenuItems>

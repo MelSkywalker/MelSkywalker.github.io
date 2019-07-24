@@ -22,7 +22,8 @@ const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #202020;
+    /* background-color: #202020; */
+    background-image: linear-gradient(#202020 95%, #fff 5%);
 `;
 
 const Section2 = styled.section`
@@ -35,6 +36,7 @@ const Section2 = styled.section`
     justify-content: center;
     align-items: center;
     background-color: white;
+    background-image: linear-gradient(#fff 95%, #202020 5%);
 `;
 
 const SocialNetworkContainer = styled.div`
@@ -77,13 +79,13 @@ const ScrollImg = styled.img`
 `;
 
 const Title = styled.h1`
-    font-family: 'Josefin Sans', sans-serif;
+font-family: 'Cambay', sans-serif;
     text-align: center;
     font-weight: lighter;
     font-size: 5vw;
     margin-bottom: 0;
     color: #d4009f;
-    background: linear-gradient(to bottom right, #d4009f, #e7529c );
+    background: linear-gradient(to top left, #d4009f, #f58bc0 );
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 `;
@@ -188,7 +190,8 @@ const Button = styled.button`
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
 `;
 
@@ -209,10 +212,14 @@ const Footer = styled.footer`
 
 const FooterNavLink = styled(NavLink)`
     height: 80%;
+    width: 15%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     cursor: pointer;
     &:active {
         color: white;
@@ -228,12 +235,7 @@ const FooterNavLink = styled(NavLink)`
 const EmailIcon = styled(MailOutline)`
     color: white;
     height: 100%;
-`;
-
-const FooterText = styled.p`
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    margin-right: 10%;
 `;
 
 const Home = () => {
@@ -272,7 +274,7 @@ const Home = () => {
                 <Footer>
                     <FooterNavLink to='/contact'>
                         <EmailIcon />
-                        <FooterText>Send me an email!</FooterText>
+                        Send me an email!
                     </FooterNavLink>
                 </Footer>
             </Section>

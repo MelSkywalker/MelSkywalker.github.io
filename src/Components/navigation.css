@@ -1,4 +1,4 @@
-.NavLink {
+/* .NavLink {
     display: inline-block;
     text-decoration: none;
     color: black;
@@ -21,4 +21,4 @@
 .NavLink:hover::after {
     width: 100%;
     transition: width .3s;
-}
+} */

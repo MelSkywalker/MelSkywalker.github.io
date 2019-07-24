@@ -43,10 +43,14 @@ const Footer = styled.footer`
 
 const FooterNavLink = styled(NavLink)`
     height: 80%;
+    width: 15%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
     cursor: pointer;
     &:active {
         color: white;
@@ -62,46 +66,45 @@ const FooterNavLink = styled(NavLink)`
 const EmailIcon = styled(MailOutline)`
     color: white;
     height: 100%;
-`;
-
-const FooterText = styled.p`
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    margin-right: 10%;
 `;
 
 const CardTextContainer = styled.div`
-    width: 50%;
+    width: 100%;
+    height: 70%;
+    margin: 10px 0;
     align-self: center;
 `;
 
 const ProjectText = styled.p`
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 14px;
     text-align: left;
-    margin: 10px 0;
 `;
 
 const ProjectTitle = styled.h3`
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
+    margin: 5px 0 5px 0;
 `;
 
 const ProjectLink = styled.a`
     color: #e7529c;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
+    display: block;
 `;
 
 const ProjectTool = styled.img`
     height: 50px;
 `;
 const RevealImg = styled.img`
-    width: 100%;
+    height: 100%;
 `;
 
 const ToolsContainer = styled.div`
@@ -114,16 +117,22 @@ const ToolsContainer = styled.div`
 `;
 
 const Card = styled.div`
-    height: 50vh;
-    width: 20%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex: 1;
     position: relative;
-    margin: 30vh 2vw 2vw 10vw;
-    border-radius: 5px;
-    border: 2px solid #d4009f;
+    border: 1px solid #d4009f;
+    border-top: 0;
+    border-bottom: 0;
+    &:nth-of-type(1){
+        border-left: 0;
+    }
+    &:nth-last-of-type(1){
+        border-right: 0;
+    }
 `;
 
 const CardContent = styled.div`
@@ -138,7 +147,7 @@ const CardContent = styled.div`
 `;
 
 const CardContentA = styled.div`
-    height: 50%;
+    height: 30%;
     width: 100%;
     background-color: white;
     display: flex;
@@ -147,7 +156,7 @@ const CardContentA = styled.div`
     padding: 10%;
 `;
 const CardContentB = styled.div`
-    height: 50%;
+    height: 70%;
     width: 100%;
     background-color: #303030;
     padding: 0 5% 5% 5%;
@@ -160,19 +169,17 @@ const CardReveal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 5%;
     background-color: #d4009f;
     position: absolute;
     overflow: hidden;
-    transition: all 0.3s ease-in;
+    transition: all 0.4s ease-in-out;
     width: 100%;
-    height: 50%;
-    left:-100%;
-    opacity: .8;
+    height: 100%;
+    top:0%;
 
     ${Card}:hover &{
-        left: 0;
-        opacity: 1;
+        top: -100%;
     }
 `;
 
@@ -180,22 +187,49 @@ const ProjectImg = styled.img`
     width: 80%;
 `;
 
+const Hint = styled.p`
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+    position: absolute;
+    bottom: 10vh;
+`;
+
+const CardContainer = styled.div`
+    background-color: #303030;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+    overflow: hidden;
+    margin-top: 30vh;
+    height: 50vh;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid #d4009f;
+`;
+
 const Portfolio = () => {
   return (
     <MainContainer>
         <Subtitle2>TAKE A LOOK!</Subtitle2>
-        {Projects.map(project => 
+        <CardContainer>
+        {Projects.map(project =>
             <Card>
             <CardContent>
                 <CardContentA>
                     <ProjectImg src={project.logo}/>
                 </CardContentA>
                 <CardContentB>
+                    <CardTextContainer>
                     <ProjectTitle>{project.title}</ProjectTitle>
                     <ProjectText>{project.description}</ProjectText>
-                    <ProjectText><ProjectLink href={project.link}>Link</ProjectLink></ProjectText>
-                    <ProjectText><ProjectLink href={project.repository}>Repository</ProjectLink></ProjectText>
-                    <ToolsContainer>{project.tools.map(tool => 
+                    <ProjectLink href={project.link}>Link</ProjectLink>
+                    <ProjectLink href={project.repository}>Repository</ProjectLink>
+                    </CardTextContainer>
+                    <ToolsContainer>{project.tools.map(tool =>
                         <ProjectTool src={tool}></ProjectTool>
                     )}</ToolsContainer>
                 </CardContentB>
@@ -203,10 +237,12 @@ const Portfolio = () => {
             <CardReveal><RevealImg src={project.picture2}></RevealImg></CardReveal>
         </Card>
         )}
+        </CardContainer>
+        <Hint>Hover over the images</Hint>
         <Footer>
             <FooterNavLink to='/contact'>
                 <EmailIcon />
-                <FooterText>Send me an email!</FooterText>
+                Send me an email!
             </FooterNavLink>
         </Footer>
     </MainContainer>

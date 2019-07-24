@@ -6,7 +6,7 @@ const MainContainer = styled.div`
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: #303030;
+    background-color: #fff;
 `;
 
 const Subtitle2 = styled.h2`
@@ -27,7 +27,7 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #202020;
+    background-color: #303030;
     height: 50vh;
     width: 50%;
     padding: 3% 10%;
@@ -46,7 +46,7 @@ const Div = styled.div`
 const Input = styled.input`
     background-color: white;
     box-sizing: border-box;
-    margin: 0;
+    margin: 1em 0 0 0;
     padding: 1em;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -55,7 +55,6 @@ const Input = styled.input`
 const InputName = styled.input`
     background-color: white;
     box-sizing: border-box;
-    margin: 0;
     padding: 1em;
     width: 50%;
     border-radius: 5px;
@@ -71,7 +70,7 @@ const InputName = styled.input`
 const Textarea = styled.textarea`
     background-color: white;
     box-sizing: border-box;
-    margin: 0;
+    margin: 1em 0 1em 0;
     padding: 1em;
     height: 50%;
     border-radius: 5px;
@@ -93,6 +92,22 @@ const Button = styled.button`
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    font-weight: bold;
+`;
+
+const Footer = styled.footer`
+    width: 100%;
+    height: 5%;
+    background-color: #303030;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
 `;
 
 class Contact extends Component {
@@ -148,6 +163,7 @@ class Contact extends Component {
                 <Textarea placeholder="MESSAGE" name="message" value={this.state.message} onChange={ e => this.setState({ message: e.target.value }) } required></Textarea>
                 <Button type='submit'>{this.state.buttonText}</Button>
             </Form>
+            <Footer></Footer>
         </MainContainer>
     );
 }
