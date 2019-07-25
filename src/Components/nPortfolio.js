@@ -227,7 +227,6 @@ const Portfolio = () => {
                     <ProjectTitle>{project.title}</ProjectTitle>
                     <ProjectText>{project.description}</ProjectText>
                     <ProjectLink href={project.link}>Link</ProjectLink>
-                    <ProjectLink href={project.repository}>Repository</ProjectLink>
                     </CardTextContainer>
                     <ToolsContainer>{project.tools.map(tool =>
                         <ProjectTool src={tool}></ProjectTool>

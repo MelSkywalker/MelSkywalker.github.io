@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ReactSnapScroll from 'react-snap-scroll';
 import { MailOutline } from 'styled-icons/material/MailOutline';
 import { NavLink } from "react-router-dom";
+import "./nHome.css"
+import "animate.css/animate.min.css";
 
 import { device } from './Device';
 import { Github } from 'styled-icons/fa-brands/Github';
@@ -22,7 +24,6 @@ const Section = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #202020; */
     background-image: linear-gradient(#202020 95%, #fff 5%);
 `;
 
@@ -252,7 +253,9 @@ const Home = () => {
                  <ScrollImg src='https://i.imgur.com/VD1cAop.png' />
             </Section>
             <Section2>
-            <Subtitle2>SUMMARY</Subtitle2>
+            <Subtitle2>
+               SUMMARY
+            </Subtitle2>
                 <TextContainer>
                     <P>I love technology and animation!</P>
                     <P>Since 2013 I have worked as a motion designer, creating graphic content and producing videos for advertising and social media.</P>
