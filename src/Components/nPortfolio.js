@@ -46,11 +46,13 @@ const FooterNavLink = styled(NavLink)`
     width: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 14px;
+    text-decoration: none;
     cursor: pointer;
     &:active {
         color: white;
@@ -59,7 +61,7 @@ const FooterNavLink = styled(NavLink)`
         color: white;
     }
     &:hover {
-        color: white;
+        color: #d4009f;
     }
 `;
 
@@ -67,6 +69,9 @@ const EmailIcon = styled(MailOutline)`
     color: white;
     height: 100%;
     margin-right: 10%;
+    ${FooterNavLink}:hover &{
+        color: #d4009f;
+    }
 `;
 
 const CardTextContainer = styled.div`
@@ -79,13 +84,14 @@ const CardTextContainer = styled.div`
 const ProjectText = styled.p`
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 100%;
     text-align: left;
 `;
 
 const ProjectTitle = styled.h3`
     color: white;
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -96,7 +102,7 @@ const ProjectLink = styled.a`
     color: #e7529c;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
     display: block;
 `;
 
@@ -147,7 +153,7 @@ const CardContent = styled.div`
 `;
 
 const CardContentA = styled.div`
-    height: 30%;
+    height: 40%;
     width: 100%;
     background-color: white;
     display: flex;
@@ -156,7 +162,7 @@ const CardContentA = styled.div`
     padding: 10%;
 `;
 const CardContentB = styled.div`
-    height: 70%;
+    height: 60%;
     width: 100%;
     background-color: #303030;
     padding: 0 5% 5% 5%;
@@ -169,22 +175,21 @@ const CardReveal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5%;
     background-color: #d4009f;
     position: absolute;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
     width: 100%;
-    height: 100%;
-    top:0%;
+    height: auto;
+    top: 0%;
 
     ${Card}:hover &{
-        top: -100%;
+        top: -120%;
     }
 `;
 
 const ProjectImg = styled.img`
-    width: 80%;
+    width: 100%;
 `;
 
 const Hint = styled.p`
@@ -226,7 +231,7 @@ const Portfolio = () => {
                     <CardTextContainer>
                     <ProjectTitle>{project.title}</ProjectTitle>
                     <ProjectText>{project.description}</ProjectText>
-                    <ProjectLink href={project.link}>Link</ProjectLink>
+                    <ProjectLink href={project.link} target='_blank' rel='noopener noreferrer'>{project.title}</ProjectLink>
                     </CardTextContainer>
                     <ToolsContainer>{project.tools.map(tool =>
                         <ProjectTool src={tool}></ProjectTool>

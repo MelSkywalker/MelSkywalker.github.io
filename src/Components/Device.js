@@ -1,9 +1,15 @@
+// const size = {
+//     desktop: '1281px',
+//     laptop: '1025px',
+//     tablet: '768px',
+//     mobileL: '481px',
+//     mobileM: '320px'
+// };
 const size = {
-    desktop: '1281px',
-    laptop: '1025px',
+    desktop: '1200px',
+    laptop: '1024px',
     tablet: '768px',
-    mobileL: '481px',
-    mobileM: '320px'
+    mobile: '640px'
 };
 
 export const device = {

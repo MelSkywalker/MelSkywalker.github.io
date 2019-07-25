@@ -18,6 +18,8 @@ const Menu = styled.ul`
 `;
 
 const NavigationLink = styled(NavLink)`
+  font-size: 18px;
+  font-weight: bolder;
   text-decoration: none;
   &:active {
     color: white;
@@ -26,7 +28,8 @@ const NavigationLink = styled(NavLink)`
     color: white;
   }
   &:hover {
-    color: white;
+    color: #d4009f;
+    border-bottom: 2px solid #d4009f;
   }
 `;
 
@@ -36,6 +39,9 @@ const MenuItems = styled.li`
   margin-right: 1vw;
   margin-left: 1vw;
   box-sizing: border-box;
+  /* &:hover{
+    border-bottom: 2px solid #d4009f;
+  } */
 `;
 
 const DivMenu = styled.div`
@@ -49,8 +55,8 @@ const Navigation = () => {
     <Menu>
       <MenuItems><NavigationLink to="/">HOME</NavigationLink></MenuItems>
       <DivMenu>
-        <MenuItems><NavigationLink to="/portfolio">Check out my work!</NavigationLink></MenuItems>
-        <MenuItems><NavigationLink to="/contact">Let's talk!</NavigationLink></MenuItems>
+        <MenuItems><NavigationLink to="/portfolio">CHECK OUT MY WORK!</NavigationLink></MenuItems>
+        <MenuItems><NavigationLink to="/contact">LET'S TALK!</NavigationLink></MenuItems>
       </DivMenu>
     </Menu>
   );

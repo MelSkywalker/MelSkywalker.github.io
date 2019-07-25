@@ -153,7 +153,7 @@ class Contact extends Component {
     render() {
     return (
         <MainContainer>
-            <Subtitle2>LET'S WORK TOGETHER!</Subtitle2>
+            <Subtitle2>LET'S TALK!</Subtitle2>
             <Form onSubmit={ (e) => this.formSubmit(e) } enctype="multipart/form-data">
                 <Div>
                     <InputName type="text" placeholder="NAME" name="name" value={this.state.name} onChange={ e => this.setState({ name: e.target.value }) } required></InputName>
