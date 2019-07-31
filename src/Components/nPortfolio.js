@@ -184,7 +184,7 @@ const CardReveal = styled.div`
     top: 0%;
 
     ${Card}:hover &{
-        top: -120%;
+        top: 100%;
     }
 `;
 
