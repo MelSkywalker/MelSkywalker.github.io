@@ -1,12 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
-import ReactSnapScroll from 'react-snap-scroll';
 import { MailOutline } from 'styled-icons/material/MailOutline';
 import { NavLink } from "react-router-dom";
 import { Github } from 'styled-icons/fa-brands/Github';
 import { Linkedin } from 'styled-icons/fa-brands/Linkedin';
+import { device } from './Device';
 
-const Section = styled.section`
+export const Section = styled.section`
     width: 100%;
     height: 90vh;
     margin: 0;
@@ -18,7 +17,7 @@ const Section = styled.section`
     background-image: linear-gradient(#202020 95%, #fff 5%);
 `;
 
-const Section2 = styled.section`
+export const Section2 = styled.section`
     width: 100%;
     height: 90vh;
     margin: 0;
@@ -31,7 +30,7 @@ const Section2 = styled.section`
     background-image: linear-gradient(#fff 95%, #202020 5%);
 `;
 
-const SocialNetworkContainer = styled.div`
+export const SocialNetworkContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,38 +38,38 @@ const SocialNetworkContainer = styled.div`
     margin-top: 2%;
 `;
 
-const Link = styled.a`
+export const Link = styled.a`
     margin: 0 10%;
     box-sizing: border-box;
 `;
 
-const GithubIcon = styled(Github)`
+export const GithubIcon = styled(Github)`
     color: white;
     width: 100%;
     height: auto;
 `;
 
-const LinkedinIcon = styled(Linkedin)`
+export const LinkedinIcon = styled(Linkedin)`
     color: white;
     width: 100%;
     height: auto;
 `;
 
-const Img = styled.img`
+export const Img = styled.img`
     width: 20%;
     @media ${device.desktop} {
         width: 10%;
     }
 `;
 
-const ScrollImg = styled.img`
+export const ScrollImg = styled.img`
     position: absolute;
     bottom: 10vh;
     right: 10vh;
     height: 180px;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
 font-family: 'Cambay', sans-serif;
     text-align: center;
     font-weight: lighter;
@@ -81,7 +80,7 @@ font-family: 'Cambay', sans-serif;
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 `;
-const Subtitle = styled.h2`
+export const Subtitle = styled.h2`
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: lighter;
@@ -92,7 +91,7 @@ const Subtitle = styled.h2`
 	-webkit-text-fill-color: transparent;
 `;
 
-const Subtitle2 = styled.h2`
+export const Subtitle2 = styled.h2`
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: lighter;
@@ -106,19 +105,19 @@ const Subtitle2 = styled.h2`
     border-radius: 10px;
 `;
 
-const TextContainer = styled.div`
+export const TextContainer = styled.div`
     width: 50%;
     align-self: center;
 `;
 
-const P = styled.p`
+export const P = styled.p`
     color: #202020;
     font-family: 'Montserrat', sans-serif;
     font-size: 1vw;
     text-align: left;
 `;
 
-const ListContainer = styled.div`
+export const ListContainer = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -126,7 +125,7 @@ const ListContainer = styled.div`
     align-items: center;
 `;
 
-const ItemList = styled.ul`
+export const ItemList = styled.ul`
     list-style: none;
     width: 100%;
     align-self: center;
@@ -137,7 +136,7 @@ const ItemList = styled.ul`
     margin: 0;
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
     display: inline;
     box-sizing: border-box;
     color: white;
@@ -148,7 +147,7 @@ const ListItem = styled.li`
     padding: 5px;
 `;
 
-const ItemList2 = styled.ul`
+export const ItemList2 = styled.ul`
     list-style: none;
     width: 100%;
     height: 40%;
@@ -158,7 +157,7 @@ const ItemList2 = styled.ul`
     flex-wrap: wrap;
 `;
 
-const ListItem2 = styled.li`
+export const ListItem2 = styled.li`
     box-sizing: border-box;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -167,18 +166,18 @@ const ListItem2 = styled.li`
     padding: 5px;
 `;
 
-const ButtonLink = styled.a`
+export const ButtonLink = styled.a`
     width: 20%;
     height: 5%;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
+    background-color: #d4009f;
     box-sizing: border-box;
     border-radius: 5px;
     margin: 10%;
     width: 100%;
     height: 100%;
-    background-color: #d4009f;
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -187,7 +186,7 @@ const Button = styled.button`
     cursor: pointer;
 `;
 
-const Footer = styled.footer`
+export const Footer = styled.footer`
     width: 100%;
     height: 5%;
     background-color: #303030;
@@ -202,7 +201,7 @@ const Footer = styled.footer`
     padding-right: 5%;
 `;
 
-const FooterNavLink = styled(NavLink)`
+export const FooterNavLink = styled(NavLink)`
     height: 80%;
     width: 15%;
     display: flex;
@@ -226,11 +225,233 @@ const FooterNavLink = styled(NavLink)`
     }
 `;
 
-const EmailIcon = styled(MailOutline)`
+export const EmailIcon = styled(MailOutline)`
     color: white;
     height: 100%;
     margin-right: 10%;
     ${FooterNavLink}:hover &{
         color: #d4009f;
     }
+`;
+
+export const MainContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+`;
+
+export const CardTextContainer = styled.div`
+    width: 100%;
+    height: 70%;
+    margin: 10px 0;
+    align-self: center;
+`;
+
+export const ProjectText = styled.p`
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%;
+    text-align: left;
+`;
+
+export const ProjectTitle = styled.h3`
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0 5px 0;
+`;
+
+export const ProjectLink = styled.a`
+    color: #e7529c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+`;
+
+export const ProjectTool = styled.img`
+    height: 50px;
+`;
+export const RevealImg = styled.img`
+    height: 100%;
+`;
+
+export const ToolsContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 30%;
+    padding-bottom: 10px;
+`;
+
+export const Card = styled.div`
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    position: relative;
+    border: 1px solid #d4009f;
+    border-top: 0;
+    border-bottom: 0;
+    &:nth-of-type(1){
+        border-left: 0;
+    }
+    &:nth-last-of-type(1){
+        border-right: 0;
+    }
+`;
+
+export const CardContent = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
+
+export const CardContentA = styled.div`
+    height: 40%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+`;
+export const CardContentB = styled.div`
+    height: 60%;
+    width: 100%;
+    background-color: #303030;
+    padding: 0 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+`;
+
+export const CardReveal = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4009f;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    height: auto;
+    top: 0%;
+
+    ${Card}:hover &{
+        top: -120%;
+    }
+`;
+
+export const ProjectImg = styled.img`
+    width: 100%;
+`;
+
+export const Hint = styled.p`
+    color: #303030;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+    position: absolute;
+    bottom: 10vh;
+`;
+
+export const CardContainer = styled.div`
+    background-color: #303030;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+    overflow: hidden;
+    margin-top: 30vh;
+    height: 50vh;
+    width: 50%;
+    border-radius: 5px;
+    border: 2px solid #d4009f;
+`;
+
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #303030;
+    height: 50vh;
+    width: 50%;
+    padding: 3% 10%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top: 30vh;
+`;
+
+export const Div = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+`;
+
+export const Input = styled.input`
+    background-color: white;
+    box-sizing: border-box;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+`;
+
+export const InputName = styled.input`
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 50%;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    &:nth-of-type(1){
+        margin-right: 0.5em;
+    }
+    &:nth-of-type(2){
+        margin-left: 0.5em;
+    }
+`;
+
+export const Textarea = styled.textarea`
+    background-color: white;
+    box-sizing: border-box;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+    height: 50%;
+    border-radius: 5px;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+`;
+
+export const SendButton = styled.button`
+    background-color: #d4009f;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    border-radius: 5px;
+    align-self: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
 `;
