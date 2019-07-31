@@ -29,7 +29,7 @@ const Home = () => {
                     <P>In 2017 I discovered the development world and in 2019 I decided to change my career path.
                     Since then I have been involved in several projects as a frontend developer.</P>
                  </TextContainer>
-                 <ButtonLink href="https://www.dropbox.com/s/xd1pfzj9aa1ayve/mel%20quesada%20resume.pdf?dl=0" target="_blank" rel ="noopener noreferrer">
+                 <ButtonLink href="https://www.dropbox.com/s/5w7tddfoqqshyfz/Melisa%20Quesada%20resume.pdf?dl=0" target="_blank" rel ="noopener noreferrer">
                     <Button>Take a look at my resume!</Button>
                 </ButtonLink>
                 <ScrollImg src='https://i.imgur.com/VD1cAop.png' />
