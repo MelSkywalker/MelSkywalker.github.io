@@ -58,6 +58,18 @@ export const LinkedinIcon = styled(Linkedin)`
 
 export const Img = styled.img`
     width: 15%;
+    @media ${device.desktop}{
+        width: 15%;
+    }
+    @media ${device.laptop}{
+        width: 15%;
+    }
+    @media ${device.tablet}{
+        width: 25%;
+    }
+    @media ${device.mobile}{
+        width: 35%;
+    }
 `;
 
 export const ScrollImg = styled.img`
@@ -71,12 +83,27 @@ export const Title = styled.h1`
     font-family: 'Cambay', sans-serif;
     text-align: center;
     font-weight: lighter;
-    margin-bottom: 0;
     color: #d4009f;
     background: linear-gradient(to top left, #d4009f, #f58bc0 );
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+    font-size: 5vw;
+    @media ${device.desktop}{
+        margin-bottom: 0;
         font-size: 5vw;
+    }
+    @media ${device.laptop}{
+        margin-bottom: 0;
+        font-size: 5vw;
+    }
+    @media ${device.tablet}{
+        margin-bottom: 0;
+        font-size: 56px;
+    }
+    @media ${device.mobile}{
+        margin-bottom: 0;
+        font-size: 24px;
     }
 `;
 export const Subtitle = styled.h2`
@@ -88,25 +115,77 @@ export const Subtitle = styled.h2`
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-size: 1.5vw;
+    @media ${device.desktop}{
+        font-size: 1.5vw;
+    }
+    @media ${device.laptop}{
+        font-size: 2vw;
+    }
+    @media ${device.tablet}{
+        font-size:24px;
+    }
+    @media ${device.mobile}{
+        font-size: 14px;
+    }
 `;
 
 export const Subtitle2 = styled.h2`
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-weight: lighter;
-    font-size: 4vw;
     color: white;
     background-image: linear-gradient(#e7529c, #d4009f);
-    padding: 1vw 1vw;
     position: absolute;
+    padding: 1vw 1vw;
+    font-size: 4vw;
     top: 5%;
     left: 5%;
     border-radius: 10px;
+    @media ${device.desktop}{
+        padding: 1vw 1vw;
+        font-size: 4vw;
+        top: 5%;
+        left: 5%;
+        border-radius: 10px;
+    }
+    @media ${device.laptop}{
+        padding: 1vw 1vw;
+        font-size: 4vw;
+        top: 5%;
+        left: 5%;
+        border-radius: 10px;
+    }
+    @media ${device.tablet}{
+        padding: 1vw 1vw;
+        font-size: 4vw;
+        top: 5%;
+        left: 5%;
+        border-radius: 10px;
+    }
+    @media ${device.mobile}{
+        padding: 1vw 1vw;
+        font-size: 24px;
+        top: 10%;
+        left: 5%;
+        border-radius: 10px;
+    }
 `;
 
 export const TextContainer = styled.div`
     align-self: center;
     width: 50%;
+    @media ${device.desktop}{
+        width: 50%;
+    }
+    @media ${device.laptop}{
+        width: 70%;
+    }
+    @media ${device.tablet}{
+        width: 70%;
+    }
+    @media ${device.mobile}{
+        width: 70%;
+    }
 `;
 
 export const P = styled.p`
@@ -114,6 +193,18 @@ export const P = styled.p`
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 1vw;
+    @media ${device.desktop}{
+        font-size: 1.5vw;
+    }
+    @media ${device.laptop}{
+        font-size: 18px;
+    }
+    @media ${device.tablet}{
+        font-size: 18px;
+    }
+    @media ${device.mobile}{
+        font-size: 14px;
+    }
 `;
 
 export const ListContainer = styled.div`
@@ -169,21 +260,65 @@ export const ListItem2 = styled.li`
 export const ButtonLink = styled.a`
     height: 5%;
     width: 20%;
+    @media ${device.desktop}{
+        height: 5%;
+        width: 20%;
+    }
+    @media ${device.laptop}{
+        height: 5%;
+        width: 30%;
+    }
+    @media ${device.tablet}{
+        height: 5%;
+        width: 30%;
+    }
+    @media ${device.mobile}{
+        height: 3%;
+        width: 40%;
+    }
 `;
 
 export const Button = styled.button`
     background-color: #d4009f;
     box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
     border-radius: 5px;
     margin: 10%;
     width: 100%;
     height: 100%;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 18px;
+    @media ${device.desktop}{
+        border-radius: 5px;
+        margin: 10%;
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+    }
+    @media ${device.laptop}{
+        border-radius: 5px;
+        margin: 10%;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+    @media ${device.tablet}{
+        border-radius: 5px;
+        margin: 10%;
+        width: 100%;
+        height: 100%;
+        font-size: 12px;
+    }
+    @media ${device.mobile}{
+        border-radius: 5px;
+        margin: 10%;
+        width: 100%;
+        height: 100%;
+        font-size: 10px;
+    }
 `;
 
 export const Footer = styled.footer`
@@ -386,7 +521,7 @@ export const CardContainer = styled.div`
     overflow: hidden;
     height: 50vh;
     border-radius: 5px;
-    border: 2px solid #d4009f;8
+    border: 2px solid #d4009f;
     width: 50%;
     margin-top: 30vh;
 `;
@@ -438,7 +573,7 @@ export const Form = styled.form`
         justify-content: center;
         height: 50vh;
         border-radius: 8px;
-        margin-top: 15vh;
+        margin-top: 20vh;
         width: 70%;
         padding: 3% 3%;
     }
