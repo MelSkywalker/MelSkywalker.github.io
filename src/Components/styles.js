@@ -386,7 +386,7 @@ export const CardContainer = styled.div`
     overflow: hidden;
     height: 50vh;
     border-radius: 5px;
-    border: 2px solid #d4009f;
+    border: 2px solid #d4009f;8
     width: 50%;
     margin-top: 30vh;
 `;
@@ -436,9 +436,9 @@ export const Form = styled.form`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 30vh;
+        height: 50vh;
         border-radius: 8px;
-        margin-top: 30vh;
+        margin-top: 15vh;
         width: 70%;
         padding: 3% 3%;
     }
@@ -502,7 +502,7 @@ export const Input = styled.input`
         margin: 1em 0 0 0;
         padding: 0.5em;
         border-radius: 5px;
-        font-size: 10px;
+        font-size: 12px;
     }
 `;
 
@@ -572,7 +572,7 @@ export const InputName = styled.input`
         &:nth-of-type(2){
             margin-top: 3%;
         }
-        font-size: 10px;
+        font-size: 12px;
     }
 `;
 
@@ -616,7 +616,7 @@ export const Textarea = styled.textarea`
         height: 30%;
         border-radius: 5px;
         border: 0;
-        font-size: 10px;
+        font-size: 12px;
     }
 `;
 
