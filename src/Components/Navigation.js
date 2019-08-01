@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { device } from './Device';
 
 const Menu = styled.ul`
   background-color: black;
@@ -18,9 +19,9 @@ const Menu = styled.ul`
 `;
 
 const NavigationLink = styled(NavLink)`
-  font-size: 18px;
   font-weight: bolder;
   text-decoration: none;
+  font-size: 18px;
   &:active {
     color: white;
   }
@@ -31,6 +32,12 @@ const NavigationLink = styled(NavLink)`
     color: #d4009f;
     border-bottom: 2px solid #d4009f;
   }
+  /* @media ${device.laptop} {
+    font-size: 18px;
+  }
+  @media ${device.tablet} {
+    font-size: 16px;
+  } */
 `;
 
 const MenuItems = styled.li`
@@ -39,15 +46,17 @@ const MenuItems = styled.li`
   margin-right: 1vw;
   margin-left: 1vw;
   box-sizing: border-box;
-  /* &:hover{
-    border-bottom: 2px solid #d4009f;
-  } */
 `;
 
 const DivMenu = styled.div`
   display: flex;
   justify-content: flex-end;
-  width: 20%;
+  @media ${device.laptop} {
+    width: 20%;
+  }
+  @media ${device.tablet} {
+    width: 40%;
+  }
 `;
 
 const Navigation = () => {
