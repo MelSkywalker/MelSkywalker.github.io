@@ -1,7 +1,7 @@
  [
      {
         "title": "Pokedex Go!",
-        "description": "Pokedex web application that shows data from the 1st gen of Pokemon in the Pokemon Go game.",
+        "description": "Pokedex web application that shows data from the 1st gen of Pokemon in the Pokemon Go game. This project was presentend to the community Women in Data.",
         "link": "https://melskywalker.github.io/GDL002-data-lovers/src/",
         "repository": "https://github.com/MelSkywalker/GDL002-data-lovers",
         "tools": [
@@ -26,7 +26,7 @@
     },
     {
         "title": "Marvelpedia",
-        "description": "Informative website that provides the right order for watching every movie from the Marvel Cinematic Universe.",
+        "description": "Informative website that provides the right order for watching every movie from the Marvel Cinematic Universe. This project won the 2nd place in the Laboratoria Internal Hackathon.",
         "link": "https://melskywalker.github.io/GDL002-hackathon-interna/",
         "repository": "https://github.com/MelSkywalker/GDL002-hackathon-interna",
         "tools": [
