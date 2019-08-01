@@ -396,12 +396,52 @@ export const Form = styled.form`
     flex-direction: column;
     justify-content: space-evenly;
     background-color: #303030;
-    height: 50vh;
     box-sizing: border-box;
+    height: 50vh;
     border-radius: 8px;
     margin-top: 30vh;
     width: 50%;
     padding: 3% 10%;
+    @media ${device.desktop} {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50vh;
+        border-radius: 8px;
+        margin-top: 30vh;
+        width: 50%;
+        padding: 3% 10%;
+    }
+    @media ${device.laptop}{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50vh;
+        border-radius: 8px;
+        margin-top: 30vh;
+        width: 70%;
+        padding: 3% 5%;
+    }
+    @media ${device.tablet}{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 50vh;
+        border-radius: 8px;
+        margin-top: 30vh;
+        width: 70%;
+        padding: 3% 5%;
+    }
+    @media ${device.mobile}{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30vh;
+        border-radius: 8px;
+        margin-top: 30vh;
+        width: 70%;
+        padding: 3% 3%;
+    }
 `;
 
 export const Div = styled.div`
@@ -409,15 +449,61 @@ export const Div = styled.div`
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    @media ${device.desktop}{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media ${device.laptop}{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media ${device.tablet}{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    @media ${device.mobile}{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
 `;
 
 export const Input = styled.input`
     background-color: white;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     margin: 1em 0 0 0;
     padding: 1em;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    @media ${device.desktop}{
+        margin: 1em 0 0 0;
+        padding: 1em;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    @media ${device.laptop}{
+        margin: 1em 0 0 0;
+        padding: 1em;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    @media ${device.tablet}{
+        margin: 1em 0 0 0;
+        padding: 1em;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        margin: 1em 0 0 0;
+        padding: 0.5em;
+        border-radius: 5px;
+        font-size: 10px;
+    }
 `;
 
 export const InputName = styled.input`
@@ -433,32 +519,148 @@ export const InputName = styled.input`
     &:nth-of-type(2){
         margin-left: 0.5em;
     }
+    font-size: 14px;
+    @media ${device.desktop}{
+        padding: 1em;
+        width: 50%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        &:nth-of-type(1){
+            margin-right: 0.5em;
+        }
+        &:nth-of-type(2){
+            margin-left: 0.5em;
+        }
+        font-size: 14px;
+    }
+    @media ${device.laptop}{
+        padding: 1em;
+        width: 50%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        &:nth-of-type(1){
+            margin-right: 0.5em;
+        }
+        &:nth-of-type(2){
+            margin-left: 0.5em;
+        }
+        font-size: 14px;
+    }
+    @media ${device.tablet}{
+        padding: 1em;
+        width: 100%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 0 !important;
+        &:nth-of-type(1){
+            margin-top: 0;
+        }
+        &:nth-of-type(2){
+            margin-top: 3%;
+        }
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        padding: 0.5em;
+        width: 100%;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 0 !important;
+        &:nth-of-type(1){
+            margin-top: 0;
+        }
+        &:nth-of-type(2){
+            margin-top: 3%;
+        }
+        font-size: 10px;
+    }
 `;
 
 export const Textarea = styled.textarea`
     background-color: white;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     margin: 1em 0 1em 0;
     padding: 1em;
     height: 50%;
     border-radius: 5px;
     border: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    @media ${device.desktop}{
+        margin: 1em 0 1em 0;
+        padding: 1em;
+        height: 50%;
+        border-radius: 5px;
+        border: 0;
+        font-size: 14px;
+    }
+    @media ${device.laptop}{
+        margin: 1em 0 1em 0;
+        padding: 1em;
+        height: 50%;
+        border-radius: 5px;
+        border: 0;
+        font-size: 14px;
+    }
+    @media ${device.tablet}{
+        margin: 1em 0 1em 0;
+        padding: 1em;
+        height: 50%;
+        border-radius: 5px;
+        border: 0;
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        margin: 1em 0 1em 0;
+        padding: 0.5em;
+        height: 30%;
+        border-radius: 5px;
+        border: 0;
+        font-size: 10px;
+    }
 `;
 
 export const SendButton = styled.button`
     background-color: #d4009f;
     box-sizing: border-box;
-    margin: 0;
-    padding: 1em;
-    width: 100%;
     border-radius: 5px;
     border: 0;
     color: white;
-    border-radius: 5px;
     align-self: center;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
     font-size: 20px;
+    @media ${device.desktop}{
+        margin: 0;
+        padding: 1em;
+        width: 100%;
+        font-size: 20px;
+        align-self: center;
+    }
+    @media ${device.laptop}{
+        margin: 0;
+        padding: 1em;
+        width: 100%;
+        font-size: 20px;
+        align-self: center;
+    }
+    @media ${device.tablet}{
+        margin: 0;
+        padding: 1em;
+        width: 100%;
+        font-size: 20px;
+        align-self: center;
+    }
+    @media ${device.mobile}{
+        margin: 0;
+        padding: 1em;
+        width: 100%;
+        font-size: 14px;
+        align-self: center;
+    }
+    
 `;
