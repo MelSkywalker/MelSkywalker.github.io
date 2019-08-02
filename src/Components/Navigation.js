@@ -32,12 +32,9 @@ const NavigationLink = styled(NavLink)`
     color: #d4009f;
     border-bottom: 2px solid #d4009f;
   }
-  /* @media ${device.laptop} {
-    font-size: 18px;
+  @media ${device.mobile}{
+    font-size: 14px;
   }
-  @media ${device.tablet} {
-    font-size: 16px;
-  } */
 `;
 
 const MenuItems = styled.li`
@@ -46,6 +43,11 @@ const MenuItems = styled.li`
   margin-right: 1vw;
   margin-left: 1vw;
   box-sizing: border-box;
+  @media ${device.mobile}{
+    &:nth-of-type(1){
+      width: 30%;
+    }
+  }
 `;
 
 const DivMenu = styled.div`
@@ -56,6 +58,11 @@ const DivMenu = styled.div`
   }
   @media ${device.tablet} {
     width: 40%;
+  }
+  @media ${device.mobile}{
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
