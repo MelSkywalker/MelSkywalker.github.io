@@ -134,7 +134,7 @@ export const ScrollImg = styled.img`
     @media ${device.mobile}{
         bottom: 10vh;
         right: 3vh;
-        height: 100px;
+        height: 80px;
     }
 `;
 
@@ -283,6 +283,7 @@ export const ListContainer = styled.div`
     }
     @media ${device.mobile}{
         width: 70%;
+        margin-top: 20vh;
     }
 `;
 
@@ -399,7 +400,7 @@ export const ButtonLink = styled.a`
         width: 30%;
     }
     @media ${device.mobile}{
-        height: 3%;
+        height: 5%;
         width: 40%;
     }
 `;
@@ -471,7 +472,6 @@ export const FooterNavLink = styled(NavLink)`
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 14px;
     text-decoration: none;
     cursor: pointer;
     &:active {
@@ -484,6 +484,23 @@ export const FooterNavLink = styled(NavLink)`
         color: #d4009f;
     }
     width: 15%;
+    font-size: 14px;
+    @media ${device.desktop}{
+        width: 15%;
+        font-size: 14px;
+    }
+    @media ${device.laptop}{
+        width: 15%;
+        font-size: 14px;
+    }
+    @media ${device.tablet}{
+        width: 35%;
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        width: 50%;
+        font-size: 10px;
+    }
 `;
 
 export const EmailIcon = styled(MailOutline)`
@@ -492,6 +509,22 @@ export const EmailIcon = styled(MailOutline)`
     margin-right: 10%;
     ${FooterNavLink}:hover &{
         color: #d4009f;
+    }
+    @media ${device.desktop}{
+        height: 100%;
+        margin-right: 10%;
+    }
+    @media ${device.laptop}{
+        height: 80%;
+        margin-right: 10%;
+    }
+    @media ${device.tablet}{
+        height: 80%;
+        margin-right: 5%;
+    }
+    @media ${device.mobile}{
+        height: 70%;
+        margin-right: 3%;
     }
 `;
 
