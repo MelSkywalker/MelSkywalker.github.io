@@ -36,7 +36,22 @@ export const SocialNetworkContainer = styled.div`
     justify-content: center;
     margin-top: 2%;
     width: 10%;
-
+    @media ${device.desktop}{
+        margin-top: 2%;
+        width: 10%;
+    }
+    @media ${device.laptop}{
+        margin-top: 2%;
+        width: 20%;
+    }
+    @media ${device.tablet}{
+        margin-top: 2%;
+        width: 20%;
+    }
+    @media ${device.mobile}{
+        margin-top: 2%;
+        width: 20%;
+    }
 `;
 
 export const Link = styled.a`
@@ -48,12 +63,36 @@ export const GithubIcon = styled(Github)`
     color: white;
     width: 100%;
     height: auto;
+    @media ${device.desktop}{
+        width: 100%; 
+    }
+    @media ${device.laptop}{
+        width: 70%; 
+    }
+    @media ${device.tablet}{
+        width: 80%;
+    }
+    @media ${device.mobile}{
+        width: 100%; 
+    }
 `;
 
 export const LinkedinIcon = styled(Linkedin)`
     color: white;
     width: 100%;
     height: auto;
+    @media ${device.desktop}{
+        width: 100%; 
+    }
+    @media ${device.laptop}{
+        width: 70%; 
+    }
+    @media ${device.tablet}{
+        width: 80%; 
+    }
+    @media ${device.mobile}{
+        width: 100%; 
+    }
 `;
 
 export const Img = styled.img`
@@ -77,6 +116,26 @@ export const ScrollImg = styled.img`
     bottom: 10vh;
     right: 10vh;
     height: 180px;
+    @media ${device.desktop}{
+        bottom: 10vh;
+        right: 10vh;
+        height: 180px;
+    }
+    @media ${device.laptop}{
+        bottom: 10vh;
+        right: 5vh;
+        height: 140px;
+    }
+    @media ${device.tablet}{
+        bottom: 10vh;
+        right: 5vh;
+        height: 120px;
+    }
+    @media ${device.mobile}{
+        bottom: 10vh;
+        right: 3vh;
+        height: 100px;
+    }
 `;
 
 export const Title = styled.h1`
@@ -213,17 +272,35 @@ export const ListContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%;
+    @media ${device.desktop}{
+        width: 50%;
+    }
+    @media ${device.laptop}{
+        width: 70%;
+    }
+    @media ${device.tablet}{
+        width: 70%;
+    }
+    @media ${device.mobile}{
+        width: 70%;
+    }
 `;
 
 export const ItemList = styled.ul`
     list-style: none;
-    width: 100%;
     align-self: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    width: 100%;
     margin: 0;
+    @media ${device.tablet}{
+        padding: 0;
+    }
+    @media ${device.mobile}{
+        padding: 0;
+    }
 `;
 
 export const ListItem = styled.li`
@@ -235,6 +312,30 @@ export const ListItem = styled.li`
     margin: 5px 10px;
     padding: 5px;
     font-size: 1vw;
+    @media ${device.desktop}{
+        border: 3px solid #e7529c;
+        margin: 5px 10px;
+        padding: 5px;
+        font-size: 1vw;
+    }
+    @media ${device.laptop}{
+        border: 3px solid #e7529c;
+        margin: 5px 10px;
+        padding: 5px;
+        font-size: 18px;
+    }
+    @media ${device.tablet}{
+        border: 2px solid #e7529c;
+        margin: 3px 8px;
+        padding: 4px;
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        border: 1px solid #e7529c;
+        margin: 3px 8px;
+        padding: 2px;
+        font-size: 10px;
+    }
 `;
 
 export const ItemList2 = styled.ul`
@@ -245,6 +346,12 @@ export const ItemList2 = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
+    @media ${device.tablet}{
+        padding: 0;
+    }
+    @media ${device.mobile}{
+        padding: 0;
+    }
 `;
 
 export const ListItem2 = styled.li`
@@ -254,7 +361,26 @@ export const ListItem2 = styled.li`
     margin: 5px;
     padding: 5px;
     font-size: 1vw;
-
+    @media ${device.desktop}{
+        margin: 5px;
+        padding: 5px;
+        font-size: 1vw;
+    }
+    @media ${device.laptop}{
+        margin: 5px;
+        padding: 5px;
+        font-size: 18px;
+    }
+    @media ${device.tablet}{
+        margin: 3px;
+        padding: 4px;
+        font-size: 14px;
+    }
+    @media ${device.mobile}{
+        margin: 3px;
+        padding: 2px;
+        font-size: 10px;
+    }
 `;
 
 export const ButtonLink = styled.a`
