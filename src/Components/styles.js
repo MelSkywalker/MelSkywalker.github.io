@@ -548,6 +548,9 @@ export const ProjectText = styled.p`
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
     text-align: left;
+    @media ${device.mobile}{
+        font-size: 9px;
+    }
 `;
 
 export const ProjectTitle = styled.h3`
@@ -558,6 +561,10 @@ export const ProjectTitle = styled.h3`
     font-weight: bold;
     text-align: center;
     margin: 5px 0 5px 0;
+    @media ${device.mobile}{
+        margin: 0;
+        font-size: 11px;
+    }
 `;
 
 export const ProjectLink = styled.a`
@@ -566,14 +573,30 @@ export const ProjectLink = styled.a`
     font-size: 16px;
     text-align: center;
     display: block;
+    @media ${device.mobile}{
+        font-size: 9px;
+    }
 `;
 
 export const ProjectTool = styled.img`
-        height: 50px;
-
+    height: 50px;
+    @media ${device.tablet}{
+        height: 30px;
+    }
+    @media ${device.mobile}{
+        height: 15px;
+    }
 `;
 export const RevealImg = styled.img`
     height: 100%;
+    @media ${device.tablet}{
+        width: 100%;
+        height: auto;
+    }
+    @media ${device.mobile}{
+        width: 100%;
+        height: auto;
+    }
 `;
 
 export const ToolsContainer = styled.div`
@@ -583,6 +606,22 @@ export const ToolsContainer = styled.div`
     width: 100%;
     padding-bottom: 10px;
     height: 30%;
+    @media ${device.tablet}{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0;
+        height: 20%;
+    }
+    @media ${device.mobile}{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0;
+        height: 20%;
+    }
 `;
 
 export const Card = styled.div`
@@ -602,27 +641,90 @@ export const Card = styled.div`
     &:nth-last-of-type(1){
         border-right: 0;
     }
+    box-sizing: border-box;
+    @media ${device.tablet}{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex: 1;
+        border: 1px solid #d4009f;
+        border-top: 0;
+        border-bottom: 0;
+        &:nth-of-type(1){
+            border-left: 0;
+        }
+        &:nth-last-of-type(1){
+            border-right: 0;
+        }
+    }
+    @media ${device.mobile}{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex: 1;
+        border: 1px solid #d4009f;
+        border-top: 0;
+        border-bottom: 0;
+        &:nth-of-type(1){
+            border-left: 0;
+        }
+        &:nth-last-of-type(1){
+            border-right: 0;
+        }
+    }
 `;
 
 export const CardContent = styled.div`
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
+    box-sizing: border-box;
+    @media ${device.tablet}{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    @media ${device.mobile}{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
 `;
 
 export const CardContentA = styled.div`
-    height: 40%;
-    width: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    height: 40%;
+    width: 100%;
     padding: 10%;
+    @media ${device.tablet}{
+        height: 100%;
+        width: 30%;
+        padding: 0;
+    }
+    @media ${device.mobile}{
+        height: 100%;
+        width: 30%;
+        padding: 0;
+    }
 `;
 export const CardContentB = styled.div`
     height: 60%;
@@ -632,6 +734,14 @@ export const CardContentB = styled.div`
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
+    @media ${device.tablet}{
+        height: 100%;
+        width: 70%;
+    }
+    @media ${device.mobile}{
+        height: 100%;
+        width: 70%;
+    }
 `;
 
 export const CardReveal = styled.div`
@@ -643,22 +753,47 @@ export const CardReveal = styled.div`
     overflow: hidden;
     transition: all 0.4s ease-in-out;
     width: 100%;
-    height: auto;
+    height: 100%;
     top: 0%;
+    left: 0%;
     @media ${device.desktop} {
+        top: 0%;
         ${Card}:hover &{
         top: -120%;
         }
     }
     @media ${device.laptop} {
+        top: 0%;
         ${Card}:hover &{
             top: 100%;
+        }
+    }
+    @media ${device.tablet} {
+        ${Card}:hover &{
+        left: -120%;
+        }
+    }
+    @media ${device.mobile} {
+        ${Card}:hover &{
+            left: -120%;
         }
     }
 `;
 
 export const ProjectImg = styled.img`
     width: 100%;
+    @media ${device.desktop}{
+        width: 100%;
+    }
+    @media ${device.laptop}{
+        width: 100%;
+    }
+    @media ${device.tablet}{
+        width: 80%;
+    }
+    @media ${device.mobile}{
+        width: 80%;
+    }
 `;
 
 export const Hint = styled.p`
@@ -668,21 +803,52 @@ export const Hint = styled.p`
     position: absolute;
     bottom: 10vh;
     font-size: 1vw;
+    @media ${device.tablet}{
+        font-size: 18px;
+    }
+    @media ${device.mobile}{
+        font-size: 14px;
+        bottom: 5vh;
+    }
 `;
 
 export const CardContainer = styled.div`
     background-color: #303030;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: stretch;
-    overflow: hidden;
     height: 50vh;
     border-radius: 5px;
     border: 2px solid #d4009f;
     width: 50%;
     margin-top: 30vh;
+    @media ${device.tablet}{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: stretch;
+        height: 50vh;
+        border-radius: 5px;
+        border: 2px solid #d4009f;
+        width: 70%;
+        margin-top: 30vh;
+    }
+    @media ${device.mobile}{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: stretch;
+        height: 60vh;
+        border-radius: 5px;
+        border: 2px solid #d4009f;
+        width: 70%;
+        margin-top: 20vh;
+    }
 `;
 
 export const Form = styled.form`
